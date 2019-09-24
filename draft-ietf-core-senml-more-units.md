@@ -4,6 +4,7 @@ ipr: trust200902
 docname: draft-ietf-core-senml-more-units-latest
 keyword: Internet-Draft
 cat: std
+updates: 8428
 pi:
   toc: 'yes'
   tocompact: 'yes'
