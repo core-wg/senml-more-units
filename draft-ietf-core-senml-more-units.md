@@ -68,6 +68,12 @@ informative:
       version: 04.00
     date: 2016-11
     target:  https://karriere.rohde-schwarz.de/fileadmin/user_upload/Standard-compliant_usage_of_quantities_units_and_equations_bro_en_5214-5061-62_v0400_96dpi.pdf
+  BIPM:
+    title: The International System of Units (SI), 9th edition
+    date: 2019
+    target: <https://www.bipm.org/utils/common/pdf/si-brochure/SI-Brochure-9.pdf>
+    author:
+      org: Bureau International des Poids es Mesures
 
 
 
@@ -164,22 +170,24 @@ IANA is requested to create a "secondary units"
 subregistry in the SenML registry {{IANA.senml}} defined in
 {{RFC8428}}.
 
-The registry has four columns:
+The registry has six columns:
 
 * secondary unit: a newly registered name allocated within the same
   namespace as SenML units
+* description: short description (usually just expansion of abbreviation)
 * SenML unit: an existing SenML unit from the SenML units registry
 * scale, offset: two rational numbers, expressed in decimal
   (optionally, with a decimal exponent given) or as a
   fraction divided by a "/" character.
+* Reference: where does the entry come from.
 
 Quantities expressed in the secondary unit can be converted into the
 SenML unit by first multiplying their value with the scale number and
 then adding the offset, yielding the value in the given SenML unit.
 
-The initial content of the secondary units registry is:
+The initial content of the secondary units registry is provided in {{secondary-unit-tbl}}:
 
-| secondary unit | Description                | SenML unit |     scale | offset | Reference |
+| secondary unit | description                | SenML unit |     scale | offset | reference |
 | ms             | millisecond                | s          |    1/1000 |      0 | RFCthis   |
 | min            | minute                     | s          |        60 |      0 | RFCthis   |
 | h              | hour                       | s          |      3600 |      0 | RFCthis   |
@@ -200,7 +208,7 @@ The initial content of the secondary units registry is:
 | ppm            | parts per million          | /          |      1e-6 |      0 | RFCthis   |
 | hPa            | hectopascal                | Pa         |       100 |      0 | RFCthis   |
 | mm             | millimeter                 | m          |    1/1000 |      0 | RFCthis   |
-
+{: #secondary-unit-tbl title="Secondary units registered for SenML"}
 
 Example: the value of a quantity given as 100 ms is first multiplied
 by 1/1000, yielding the number 0.1, and then the offset 0 is added,
@@ -214,7 +222,8 @@ defined in {{RFC8126}}.  Experts should exercise their own good
 judgment, with the same guidelines as used for SenML units (Section
 12.1 of {{RFC8428}}), but without applying the rules 4 and 5.
 Guidelines to the difference between units (which can go into the
-registry) and quantities are widely available, see for instance {{RS}}.
+registry) and quantities are widely available, see for instance {{RS}}
+and {{BIPM}}.
 
 SenML packs MAY, but SHOULD NOT use secondary units in place of SenML
 units, where the exception of the "SHOULD NOT" lies in the context of
