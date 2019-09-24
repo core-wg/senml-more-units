@@ -179,27 +179,27 @@ then adding the offset, yielding the value in the given SenML unit.
 
 The initial content of the secondary units registry is:
 
-| secondary unit | SenML unit |     scale | offset | Reference |
-| ms             | s          |    1/1000 |      0 | RFCthis   |
-| min            | s          |        60 |      0 | RFCthis   |
-| h              | s          |      3600 |      0 | RFCthis   |
-| kW             | W          |      1000 |      0 | RFCthis   |
-| kVA            | VA         |      1000 |      0 | RFCthis   |
-| kvar           | var        |      1000 |      0 | RFCthis   |
-| Ah             | C          |      3600 |      0 | RFCthis   |
-| Wh             | J          |      3600 |      0 | RFCthis   |
-| kWh            | J          |   3600000 |      0 | RFCthis   |
-| varh           | vars       |      3600 |      0 | RFCthis   |
-| Wh/km          | J/m        |       3.6 |      0 | RFCthis   |
-| KiB            | B          |      1024 |      0 | RFCthis   |
-| mV             | V          |    1/1000 |      0 | RFCthis   |
-| mA             | A          |    1/1000 |      0 | RFCthis   |
-| dBm            | dBW        |         1 |    -30 | RFCthis   |
-| ug/m3          | kg/m3      |      1e-9 |      0 | RFCthis   |
-| mm/h           | m/s        | 1/3600000 |      0 | RFCthis   |
-| ppm            | /          |      1e-6 |      0 | RFCthis   |
-| hPa            | Pa         |       100 |      0 | RFCthis   |
-| mm             | m          |    1/1000 |      0 | RFCthis   |
+| secondary unit | Description                | SenML unit |     scale | offset | Reference |
+| ms             | millisecond                | s          |    1/1000 |      0 | RFCthis   |
+| min            | minute                     | s          |        60 |      0 | RFCthis   |
+| h              | hour                       | s          |      3600 |      0 | RFCthis   |
+| kW             | kilowatt                   | W          |      1000 |      0 | RFCthis   |
+| kVA            | kilovolt-ampere            | VA         |      1000 |      0 | RFCthis   |
+| kvar           | kilovar                    | var        |      1000 |      0 | RFCthis   |
+| Ah             | ampere-hour                | C          |      3600 |      0 | RFCthis   |
+| Wh             | watt-hour                  | J          |      3600 |      0 | RFCthis   |
+| kWh            | kilowatt-hour              | J          |   3600000 |      0 | RFCthis   |
+| varh           | var-hour                   | vars       |      3600 |      0 | RFCthis   |
+| Wh/km          | watts-hour per kilometer   | J/m        |       3.6 |      0 | RFCthis   |
+| KiB            | kibibyte                   | B          |      1024 |      0 | RFCthis   |
+| mV             | millivolt                  | V          |    1/1000 |      0 | RFCthis   |
+| mA             | milliampere                | A          |    1/1000 |      0 | RFCthis   |
+| dBm            | decibel (milliwatt)        | dBW        |         1 |    -30 | RFCthis   |
+| ug/m3          | micrograms per cubic meter | kg/m3      |      1e-9 |      0 | RFCthis   |
+| mm/h           | millimeter per hour        | m/s        | 1/3600000 |      0 | RFCthis   |
+| ppm            | parts per million          | /          |      1e-6 |      0 | RFCthis   |
+| hPa            | hectopascal                | Pa         |       100 |      0 | RFCthis   |
+| mm             | millimeter                 | m          |    1/1000 |      0 | RFCthis   |
 
 
 Example: the value of a quantity given as 100 ms is first multiplied
