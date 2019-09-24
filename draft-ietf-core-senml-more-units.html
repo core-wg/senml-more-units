@@ -300,7 +300,7 @@ ul.toc li {
 
   <meta name="dct.creator" content="Bormann, C." />
   <meta name="dct.identifier" content="urn:ietf:id:draft-ietf-core-senml-more-units-latest" />
-  <meta name="dct.issued" scheme="ISO8601" content="2019-09-02" />
+  <meta name="dct.issued" scheme="ISO8601" content="2019-09-24" />
   <meta name="dct.abstract" content="The Sensor Measurement Lists (SenML) media type supports the indication of units for a quantity represented.  This short document registers a number of additional unit names in the IANA registry for Units in SenML.  It also defines a registry for secondary units that cannot be in SenML&#8217;s main registry as they are derived by linear transformation from units already in that registry." />
   <meta name="description" content="The Sensor Measurement Lists (SenML) media type supports the indication of units for a quantity represented.  This short document registers a number of additional unit names in the IANA registry for Units in SenML.  It also defines a registry for secondary units that cannot be in SenML&#8217;s main registry as they are derived by linear transformation from units already in that registry." />
 
@@ -320,11 +320,15 @@ ul.toc li {
 <td class="right">Universitaet Bremen TZI</td>
 </tr>
 <tr>
-<td class="left">Intended status: Standards Track</td>
-<td class="right">September 02, 2019</td>
+<td class="left">Updates: 8428 (if approved)</td>
+<td class="right">September 24, 2019</td>
 </tr>
 <tr>
-<td class="left">Expires: March 5, 2020</td>
+<td class="left">Intended status: Standards Track</td>
+<td class="right"></td>
+</tr>
+<tr>
+<td class="left">Expires: March 27, 2020</td>
 <td class="right"></td>
 </tr>
 
@@ -341,7 +345,7 @@ ul.toc li {
 <p>This Internet-Draft is submitted in full conformance with the provisions of BCP 78 and BCP 79.</p>
 <p>Internet-Drafts are working documents of the Internet Engineering Task Force (IETF).  Note that other groups may also distribute working documents as Internet-Drafts.  The list of current Internet-Drafts is at https://datatracker.ietf.org/drafts/current/.</p>
 <p>Internet-Drafts are draft documents valid for a maximum of six months and may be updated, replaced, or obsoleted by other documents at any time.  It is inappropriate to use Internet-Drafts as reference material or to cite them other than as "work in progress."</p>
-<p>This Internet-Draft will expire on March 5, 2020.</p>
+<p>This Internet-Draft will expire on March 27, 2020.</p>
 <h1 id="rfc.copyrightnotice"><a href="#rfc.copyrightnotice">Copyright Notice</a></h1>
 <p>Copyright (c) 2019 IETF Trust and the persons identified as the document authors.  All rights reserved.</p>
 <p>This document is subject to BCP 78 and the IETF Trust's Legal Provisions Relating to IETF Documents (https://trustee.ietf.org/license-info) in effect on the date of publication of this document.  Please review these documents carefully, as they describe your rights and restrictions with respect to this document.  Code Components extracted from this document must include Simplified BSD License text as described in Section 4.e of the Trust Legal Provisions and are provided without warranty as described in the Simplified BSD License.</p>
@@ -460,27 +464,34 @@ ul.toc li {
 <a href="#rfc.section.4">4.</a> <a href="#new-registry" id="new-registry">New Registry</a>
 </h1>
 <p id="rfc.section.4.p.1">IANA is requested to create a &#8220;secondary units&#8221; subregistry in the SenML registry <a href="#IANA.senml" class="xref">[IANA.senml]</a> defined in <a href="#RFC8428" class="xref">[RFC8428]</a>.</p>
-<p id="rfc.section.4.p.2">The registry has four columns:</p>
+<p id="rfc.section.4.p.2">The registry has six columns:</p>
 <p></p>
 
 <ul>
 <li>secondary unit: a newly registered name allocated within the same namespace as SenML units</li>
+<li>description: short description (usually just expansion of abbreviation)</li>
 <li>SenML unit: an existing SenML unit from the SenML units registry</li>
 <li>scale, offset: two rational numbers, expressed in decimal (optionally, with a decimal exponent given) or as a fraction divided by a &#8220;/&#8221; character.</li>
+<li>Reference: where does the entry come from.</li>
 </ul>
 <p id="rfc.section.4.p.4">Quantities expressed in the secondary unit can be converted into the SenML unit by first multiplying their value with the scale number and then adding the offset, yielding the value in the given SenML unit.</p>
-<p id="rfc.section.4.p.5">The initial content of the secondary units registry is:</p>
+<p id="rfc.section.4.p.5">The initial content of the secondary units registry is provided in <a href="#secondary-unit-tbl" class="xref">Table 2</a>:</p>
+<div id="rfc.table.2"></div>
+<div id="secondary-unit-tbl"></div>
 <table cellpadding="3" cellspacing="0" class="tt full center">
+<caption>Secondary units registered for SenML</caption>
 <thead><tr>
 <th class="left">secondary unit</th>
+<th class="left">description</th>
 <th class="left">SenML unit</th>
 <th class="left">scale</th>
-<th class="left">offset</th>
-<th class="left">Reference</th>
+<th class="left">off- set</th>
+<th class="left">refer- ence</th>
 </tr></thead>
 <tbody>
 <tr>
 <td class="left">ms</td>
+<td class="left">millisecond</td>
 <td class="left">s</td>
 <td class="left">1/1000</td>
 <td class="left">0</td>
@@ -488,6 +499,7 @@ ul.toc li {
 </tr>
 <tr>
 <td class="left">min</td>
+<td class="left">minute</td>
 <td class="left">s</td>
 <td class="left">60</td>
 <td class="left">0</td>
@@ -495,6 +507,7 @@ ul.toc li {
 </tr>
 <tr>
 <td class="left">h</td>
+<td class="left">hour</td>
 <td class="left">s</td>
 <td class="left">3600</td>
 <td class="left">0</td>
@@ -502,6 +515,7 @@ ul.toc li {
 </tr>
 <tr>
 <td class="left">kW</td>
+<td class="left">kilowatt</td>
 <td class="left">W</td>
 <td class="left">1000</td>
 <td class="left">0</td>
@@ -509,6 +523,7 @@ ul.toc li {
 </tr>
 <tr>
 <td class="left">kVA</td>
+<td class="left">kilovolt-ampere</td>
 <td class="left">VA</td>
 <td class="left">1000</td>
 <td class="left">0</td>
@@ -516,6 +531,7 @@ ul.toc li {
 </tr>
 <tr>
 <td class="left">kvar</td>
+<td class="left">kilovar</td>
 <td class="left">var</td>
 <td class="left">1000</td>
 <td class="left">0</td>
@@ -523,6 +539,7 @@ ul.toc li {
 </tr>
 <tr>
 <td class="left">Ah</td>
+<td class="left">ampere-hour</td>
 <td class="left">C</td>
 <td class="left">3600</td>
 <td class="left">0</td>
@@ -530,6 +547,7 @@ ul.toc li {
 </tr>
 <tr>
 <td class="left">Wh</td>
+<td class="left">watt-hour</td>
 <td class="left">J</td>
 <td class="left">3600</td>
 <td class="left">0</td>
@@ -537,20 +555,15 @@ ul.toc li {
 </tr>
 <tr>
 <td class="left">kWh</td>
+<td class="left">kilowatt-hour</td>
 <td class="left">J</td>
 <td class="left">3600000</td>
 <td class="left">0</td>
 <td class="left">RFCthis</td>
 </tr>
 <tr>
-<td class="left">kvar</td>
-<td class="left">var</td>
-<td class="left">1000</td>
-<td class="left">0</td>
-<td class="left">RFCthis</td>
-</tr>
-<tr>
 <td class="left">varh</td>
+<td class="left">var-hour</td>
 <td class="left">vars</td>
 <td class="left">3600</td>
 <td class="left">0</td>
@@ -558,6 +571,7 @@ ul.toc li {
 </tr>
 <tr>
 <td class="left">Wh/km</td>
+<td class="left">watts-hour per kilometer</td>
 <td class="left">J/m</td>
 <td class="left">3.6</td>
 <td class="left">0</td>
@@ -565,6 +579,7 @@ ul.toc li {
 </tr>
 <tr>
 <td class="left">KiB</td>
+<td class="left">kibibyte</td>
 <td class="left">B</td>
 <td class="left">1024</td>
 <td class="left">0</td>
@@ -572,6 +587,7 @@ ul.toc li {
 </tr>
 <tr>
 <td class="left">mV</td>
+<td class="left">millivolt</td>
 <td class="left">V</td>
 <td class="left">1/1000</td>
 <td class="left">0</td>
@@ -579,6 +595,7 @@ ul.toc li {
 </tr>
 <tr>
 <td class="left">mA</td>
+<td class="left">milliampere</td>
 <td class="left">A</td>
 <td class="left">1/1000</td>
 <td class="left">0</td>
@@ -586,6 +603,7 @@ ul.toc li {
 </tr>
 <tr>
 <td class="left">dBm</td>
+<td class="left">decibel (milliwatt)</td>
 <td class="left">dBW</td>
 <td class="left">1</td>
 <td class="left">-30</td>
@@ -593,6 +611,7 @@ ul.toc li {
 </tr>
 <tr>
 <td class="left">ug/m3</td>
+<td class="left">micrograms per cubic meter</td>
 <td class="left">kg/m3</td>
 <td class="left">1e-9</td>
 <td class="left">0</td>
@@ -600,6 +619,7 @@ ul.toc li {
 </tr>
 <tr>
 <td class="left">mm/h</td>
+<td class="left">millimeter per hour</td>
 <td class="left">m/s</td>
 <td class="left">1/3600000</td>
 <td class="left">0</td>
@@ -607,6 +627,7 @@ ul.toc li {
 </tr>
 <tr>
 <td class="left">ppm</td>
+<td class="left">parts per million</td>
 <td class="left">/</td>
 <td class="left">1e-6</td>
 <td class="left">0</td>
@@ -614,6 +635,7 @@ ul.toc li {
 </tr>
 <tr>
 <td class="left">hPa</td>
+<td class="left">hectopascal</td>
 <td class="left">Pa</td>
 <td class="left">100</td>
 <td class="left">0</td>
@@ -621,6 +643,7 @@ ul.toc li {
 </tr>
 <tr>
 <td class="left">mm</td>
+<td class="left">millimeter</td>
 <td class="left">m</td>
 <td class="left">1/1000</td>
 <td class="left">0</td>
@@ -629,7 +652,7 @@ ul.toc li {
 </tbody>
 </table>
 <p id="rfc.section.4.p.6">Example: the value of a quantity given as 100 ms is first multiplied by 1/1000, yielding the number 0.1, and then the offset 0 is added, yielding the number 0.1 again, leading to a quantity of 0.1 s.  The value of a quantity given as 10 dBm is first multiplied by 1, yielding the number 10, and then the offset -30 is added, yielding the number -20, leading to a quantity of -20 dBW.</p>
-<p id="rfc.section.4.p.7">New entries can be added to the registration by Expert Review as defined in <a href="#RFC8126" class="xref">[RFC8126]</a>.  Experts should exercise their own good judgment, with the same guidelines as used for SenML units (Section 12.1 of <a href="#RFC8428" class="xref">[RFC8428]</a>), but without applying the rules 4 and 5.  Guidelines to the difference between units (which can go into the registry) and quantities are widely available, see for instance <a href="#RS" class="xref">[RS]</a>.</p>
+<p id="rfc.section.4.p.7">New entries can be added to the registration by Expert Review as defined in <a href="#RFC8126" class="xref">[RFC8126]</a>.  Experts should exercise their own good judgment, with the same guidelines as used for SenML units (Section 12.1 of <a href="#RFC8428" class="xref">[RFC8428]</a>), but without applying the rules 4 and 5.  Guidelines to the difference between units (which can go into the registry) and quantities are widely available, see for instance <a href="#RS" class="xref">[RS]</a> and <a href="#BIPM" class="xref">[BIPM]</a>.</p>
 <p id="rfc.section.4.p.8">SenML packs MAY, but SHOULD NOT use secondary units in place of SenML units, where the exception of the &#8220;SHOULD NOT&#8221; lies in the context of specific existing data models that are based on these secondary units.</p>
 <p id="rfc.section.4.p.9">[So does this spec update RFC 8428?]</p>
 <h1 id="rfc.section.5">
@@ -687,11 +710,18 @@ ul.toc li {
 </tbody></table>
 <h1 id="rfc.references.2">
 <a href="#rfc.references.2">8.2.</a> Informative References</h1>
-<table><tbody><tr>
+<table><tbody>
+<tr>
+<td class="reference"><b id="BIPM">[BIPM]</b></td>
+<td class="top">
+<a>Bureau International des Poids es Mesures</a>, "<a href="https://www.bipm.org/utils/common/pdf/si-brochure/SI-Brochure-9-EN.pdf">The International System of Units (SI), 9th edition</a>", 2019.</td>
+</tr>
+<tr>
 <td class="reference"><b id="RS">[RS]</b></td>
 <td class="top">
 <a>Rohde&amp;Schwarz</a>, "<a href="https://karriere.rohde-schwarz.de/fileadmin/user_upload/Standard-compliant_usage_of_quantities_units_and_equations_bro_en_5214-5061-62_v0400_96dpi.pdf">Standard-compliant usage of quantities, units and equations</a>", version 4.0, November 2016.</td>
-</tr></tbody></table>
+</tr>
+</tbody></table>
 <h1 id="rfc.authors"><a href="#rfc.authors">Author's Address</a></h1>
 <div class="avoidbreak">
   <address class="vcard">
