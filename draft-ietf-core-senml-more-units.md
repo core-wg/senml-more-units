@@ -18,7 +18,7 @@ pi:
   subcompact: 'no'
 title: Additional Units for SenML
 abbrev: Additional Units for SenML
-date: 2019-09-02
+date: 2019-09-24
 author:
 -
   ins: C. Bormann
@@ -189,7 +189,6 @@ The initial content of the secondary units registry is:
 | Ah             | C          |      3600 |      0 | RFCthis   |
 | Wh             | J          |      3600 |      0 | RFCthis   |
 | kWh            | J          |   3600000 |      0 | RFCthis   |
-| kvar           | var        |      1000 |      0 | RFCthis   |
 | varh           | vars       |      3600 |      0 | RFCthis   |
 | Wh/km          | J/m        |       3.6 |      0 | RFCthis   |
 | KiB            | B          |      1024 |      0 | RFCthis   |
