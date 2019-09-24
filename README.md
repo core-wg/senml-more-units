@@ -2,7 +2,7 @@
 
 This is the working area for the IETF [CORE Working Group](https://datatracker.ietf.org/wg/core/documents/) Internet-Draft, "Additional Units for SenML".
 
-* [Editor's Copy](https://core-wg.github.io/senml-more-units/#go.draft-ietf-core-senml-more-units.html)
+* [Editor's Copy](https://core-wg.github.io/senml-more-units/#go.draft-ietf-core-senml-more-units.html)   [![Build Status](https://travis-ci.org/core-wg/senml-more-units.svg?branch=master)](https://travis-ci.org/core-wg/senml-more-units)
 * [Working Group Draft](https://tools.ietf.org/html/draft-ietf-core-senml-more-units)
 * [Compare Editor's Copy to Working Group Draft](https://core-wg.github.io/senml-more-units/#go.draft-ietf-core-senml-more-units.diff)
 
