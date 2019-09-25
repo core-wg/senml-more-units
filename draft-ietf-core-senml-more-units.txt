@@ -19,7 +19,8 @@ Abstract
    registers a number of additional unit names in the IANA registry for
    Units in SenML.  It also defines a registry for secondary units that
    cannot be in SenML's main registry as they are derived by linear
-   transformation from units already in that registry.
+   transformation from units already in that registry; RFC 8428 is
+   updated to also accept these units.
 
 Status of This Memo
 
@@ -49,7 +50,6 @@ Copyright Notice
    publication of this document.  Please review these documents
    carefully, as they describe your rights and restrictions with respect
    to this document.  Code Components extracted from this document must
-   include Simplified BSD License text as described in Section 4.e of
 
 
 
@@ -58,13 +58,14 @@ Bormann                  Expires March 27, 2020                 [Page 1]
 Internet-Draft         Additional Units for SenML         September 2019
 
 
+   include Simplified BSD License text as described in Section 4.e of
    the Trust Legal Provisions and are provided without warranty as
    described in the Simplified BSD License.
 
 Table of Contents
 
    1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   2
-   2.  New Units . . . . . . . . . . . . . . . . . . . . . . . . . .   2
+   2.  New Units . . . . . . . . . . . . . . . . . . . . . . . . . .   3
    3.  Rationale . . . . . . . . . . . . . . . . . . . . . . . . . .   3
    4.  New Registry  . . . . . . . . . . . . . . . . . . . . . . . .   4
    5.  Security Considerations . . . . . . . . . . . . . . . . . . .   6
@@ -80,27 +81,26 @@ Table of Contents
    The Sensor Measurement Lists (SenML, [RFC8428]) media type supports
    the indication of a unit, using the SenML field "u", for the quantity
    given as a data value in a SenML record.  For this purpose, SenML
-   defines an IANA registry of defined Unit names and their meanings.
+   defines an IANA registry of defined Unit names and their meanings; in
+   the present document, we call the Unit names registered there
+   "primary Unit names".
 
    This short document registers a number of additional units in the
    IANA registry for Units in SenML that appear to be necessary for
    further adopting SenML in other Standards Development Organizations
    (SDOs).
 
+   The document also defines a registry for secondary Unit names that
+   cannot be in SenML's main registry as they are derived by linear
+   transformation from units already in that registry.  [RFC8428] is
+   updated to also accept these secondary Unit names in place of the
+   (primary) Unit names defined in [RFC8428].
+
    The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
    "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and
    "OPTIONAL" in this document are to be interpreted as described in
    BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all
    capitals, as shown here.
-
-2.  New Units
-
-   IANA is requested to assign new units in the "SenML Units"
-   subregistry of the SenML registry [IANA.senml] (as defined in
-   [RFC8428]):
-
-
-
 
 
 
@@ -113,6 +113,12 @@ Bormann                  Expires March 27, 2020                 [Page 2]
 
 Internet-Draft         Additional Units for SenML         September 2019
 
+
+2.  New Units
+
+   IANA is requested to assign new units in the "SenML Units"
+   subregistry of the SenML registry [IANA.senml] (as defined in
+   [RFC8428]):
 
    +--------+--------------------------------------+-------+-----------+
    | Symbol | Description                          | Type  | Reference |
@@ -155,13 +161,7 @@ Internet-Draft         Additional Units for SenML         September 2019
 
    o  The Volt-Ampere.  [IEC-80000-6]} item 6-57.a defines the VA (volt
       ampere) as a unit for apparent power; items 6-59.a, 6-60.a and
-      6-61.a also use the unit for complex, reactive, and non-active
-      power.
 
-   o  The Volt-Ampere-reactive.  [IEC-80000-6] item 6-60.b defines the
-      var (volt ampere reactive) as an alternative (and fully
-      equivalent) unit to VA specifically for reactive power (with the
-      primary unit VA).  It is not presently known to this author how
 
 
 
@@ -170,6 +170,13 @@ Bormann                  Expires March 27, 2020                 [Page 3]
 Internet-Draft         Additional Units for SenML         September 2019
 
 
+      6-61.a also use the unit for complex, reactive, and non-active
+      power.
+
+   o  The Volt-Ampere-reactive.  [IEC-80000-6] item 6-60.b defines the
+      var (volt ampere reactive) as an alternative (and fully
+      equivalent) unit to VA specifically for reactive power (with the
+      primary unit VA).  It is not presently known to this author how
       the upcoming revision of IEC 80000-6 will update this, but it has
       became clear that there is strong interest in using this unit
       specifically for the imaginary content of complex power, reactive
@@ -211,13 +218,6 @@ Internet-Draft         Additional Units for SenML         September 2019
 
    The initial content of the secondary units registry is provided in
    Table 2:
-
-
-
-
-
-
-
 
 
 
@@ -287,8 +287,6 @@ Internet-Draft         Additional Units for SenML         September 2019
    context of specific existing data models that are based on these
    secondary units.
 
-   [So does this spec update RFC 8428?]
-
 5.  Security Considerations
 
    The security considerations of [RFC8428] apply.  The introduction of
@@ -330,6 +328,8 @@ Acknowledgements
               Requirement Levels", BCP 14, RFC 2119,
               DOI 10.17487/RFC2119, March 1997,
               <https://www.rfc-editor.org/info/rfc2119>.
+
+
 
 
 
