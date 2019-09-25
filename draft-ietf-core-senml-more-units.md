@@ -86,7 +86,7 @@ This short document registers a number of additional unit names in the
 IANA registry for Units in SenML.
 It also defines a registry for secondary units that cannot be in SenML's
 main registry as they are derived by linear transformation from units
-already in that registry.
+already in that registry; RFC 8428 is updated to also accept these units.
 
 --- middle
 
@@ -97,12 +97,20 @@ already in that registry.
 The Sensor Measurement Lists (SenML, {{-senml}}) media type supports the
 indication of a unit, using the SenML field "u", for the quantity
 given as a data value in a SenML record.   For this purpose, SenML
-defines an IANA registry of defined Unit names and their meanings.
+defines an IANA registry of defined Unit names and their meanings; in
+the present document, we call the Unit names registered there "primary
+Unit names".
 
 This short document registers a number of additional units in the IANA
 registry for Units in SenML that appear to be
 necessary for further adopting SenML in other Standards Development
 Organizations (SDOs).
+
+The document also defines a registry for secondary Unit names that
+cannot be in SenML's main registry as they are derived by linear
+transformation from units already in that registry.  {{-senml}} is
+updated to also accept these secondary Unit names in place of the
+(primary) Unit names defined in {{-senml}}.
 
 {::boilerplate bcp14}
 
@@ -229,8 +237,6 @@ and {{BIPM}}.
 SenML packs MAY, but SHOULD NOT, use secondary units in place of SenML
 units, where the exception of the "SHOULD NOT" lies in the context of
 specific existing data models that are based on these secondary units.
-
-\[So does this spec update RFC 8428?]
 
 # Security Considerations {#seccons}
 
