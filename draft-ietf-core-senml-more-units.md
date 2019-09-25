@@ -151,11 +151,11 @@ a small number of alternative units in wide use:
   unit to VA specifically for reactive power (with the primary unit
   VA).  It is not presently known to this author how the upcoming
   revision of IEC 80000-6 will update this, but it has became clear
-  since that there is strong interest in using this unit
+  that there is strong interest in using this unit
   specifically for the imaginary content of complex power, reactive
   power {{IEEE-1459}}.
 
-The unit "degrees" is unit in wide use in practice for plane angle (as
+The unit "degrees" is in wide use in practice for plane angles (as
 in heading, bearing, etc.).  It is marked with an asterisk because the
 preferred coherent SI unit is radian ("rad").
 
@@ -226,7 +226,7 @@ Guidelines to the difference between units (which can go into the
 registry) and quantities are widely available, see for instance {{RS}}
 and {{BIPM}}.
 
-SenML packs MAY, but SHOULD NOT use secondary units in place of SenML
+SenML packs MAY, but SHOULD NOT, use secondary units in place of SenML
 units, where the exception of the "SHOULD NOT" lies in the context of
 specific existing data models that are based on these secondary units.
 
