@@ -1,6 +1,54 @@
 [
 
   {
+    "url": "https://api.github.com/repos/core-wg/senml-more-units/issues/2",
+    "repository_url": "https://api.github.com/repos/core-wg/senml-more-units",
+    "labels_url": "https://api.github.com/repos/core-wg/senml-more-units/issues/2/labels{/name}",
+    "comments_url": "https://api.github.com/repos/core-wg/senml-more-units/issues/2/comments",
+    "events_url": "https://api.github.com/repos/core-wg/senml-more-units/issues/2/events",
+    "html_url": "https://github.com/core-wg/senml-more-units/issues/2",
+    "id": 498312828,
+    "node_id": "MDU6SXNzdWU0OTgzMTI4Mjg=",
+    "number": 2,
+    "title": "Add information about the \"updates 8428\" to abstract and intro.",
+    "user": {
+      "login": "cabo",
+      "id": 23118,
+      "node_id": "MDQ6VXNlcjIzMTE4",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/23118?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/cabo",
+      "html_url": "https://github.com/cabo",
+      "followers_url": "https://api.github.com/users/cabo/followers",
+      "following_url": "https://api.github.com/users/cabo/following{/other_user}",
+      "gists_url": "https://api.github.com/users/cabo/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/cabo/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/cabo/subscriptions",
+      "organizations_url": "https://api.github.com/users/cabo/orgs",
+      "repos_url": "https://api.github.com/users/cabo/repos",
+      "events_url": "https://api.github.com/users/cabo/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/cabo/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "assignees": [
+
+    ],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2019-09-25T14:10:10Z",
+    "updated_at": "2019-09-25T14:10:10Z",
+    "closed_at": null,
+    "author_association": "MEMBER",
+    "body": "Explain in abstract and intro how this \"updates 8428\"."
+  },
+  {
     "url": "https://api.github.com/repos/core-wg/senml-more-units/issues/1",
     "repository_url": "https://api.github.com/repos/core-wg/senml-more-units",
     "labels_url": "https://api.github.com/repos/core-wg/senml-more-units/issues/1/labels{/name}",
