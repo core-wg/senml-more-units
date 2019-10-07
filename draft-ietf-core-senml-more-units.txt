@@ -125,6 +125,8 @@ Internet-Draft         Additional Units for SenML         September 2019
    +--------+--------------------------------------+-------+-----------+
    | B      | Byte (information content)           | float | RFCthis   |
    | VA     | volt-ampere (Apparent Power)         | float | RFCthis   |
+   | VAs    | volt-ampere seconds (Apparent        | float | RFCthis   |
+   |        | Energy)                              |       |           |
    | var    | volt-ampere reactive (Reactive       | float | RFCthis   |
    |        | Power)                               |       |           |
    | vars   | volt-ampere reactive seconds         | float | RFCthis   |
@@ -159,8 +161,6 @@ Internet-Draft         Additional Units for SenML         September 2019
       potentially confusing, the situation is widely understood in
       engineering circles and is unlikely to cause actual problems.
 
-   o  The Volt-Ampere.  [IEC-80000-6]} item 6-57.a defines the VA (volt
-      ampere) as a unit for apparent power; items 6-59.a, 6-60.a and
 
 
 
@@ -170,6 +170,8 @@ Bormann                  Expires March 27, 2020                 [Page 3]
 Internet-Draft         Additional Units for SenML         September 2019
 
 
+   o  The Volt-Ampere.  [IEC-80000-6]} item 6-57.a defines the VA (volt
+      ampere) as a unit for apparent power; items 6-59.a, 6-60.a and
       6-61.a also use the unit for complex, reactive, and non-active
       power.
 
@@ -216,8 +218,6 @@ Internet-Draft         Additional Units for SenML         September 2019
    SenML unit by first multiplying their value with the scale number and
    then adding the offset, yielding the value in the given SenML unit.
 
-   The initial content of the secondary units registry is provided in
-   Table 2:
 
 
 
@@ -226,36 +226,46 @@ Bormann                  Expires March 27, 2020                 [Page 4]
 Internet-Draft         Additional Units for SenML         September 2019
 
 
-   +-----------+-----------------+-------+-----------+-------+---------+
-   | secondary | description     | SenML | scale     | off-  | refer-  |
-   | unit      |                 | unit  |           | set   | ence    |
-   +-----------+-----------------+-------+-----------+-------+---------+
-   | ms        | millisecond     | s     | 1/1000    | 0     | RFCthis |
-   | min       | minute          | s     | 60        | 0     | RFCthis |
-   | h         | hour            | s     | 3600      | 0     | RFCthis |
-   | kW        | kilowatt        | W     | 1000      | 0     | RFCthis |
-   | kVA       | kilovolt-ampere | VA    | 1000      | 0     | RFCthis |
-   | kvar      | kilovar         | var   | 1000      | 0     | RFCthis |
-   | Ah        | ampere-hour     | C     | 3600      | 0     | RFCthis |
-   | Wh        | watt-hour       | J     | 3600      | 0     | RFCthis |
-   | kWh       | kilowatt-hour   | J     | 3600000   | 0     | RFCthis |
-   | varh      | var-hour        | vars  | 3600      | 0     | RFCthis |
-   | Wh/km     | watts-hour per  | J/m   | 3.6       | 0     | RFCthis |
-   |           | kilometer       |       |           |       |         |
-   | KiB       | kibibyte        | B     | 1024      | 0     | RFCthis |
-   | mV        | millivolt       | V     | 1/1000    | 0     | RFCthis |
-   | mA        | milliampere     | A     | 1/1000    | 0     | RFCthis |
-   | dBm       | decibel         | dBW   | 1         | -30   | RFCthis |
-   |           | (milliwatt)     |       |           |       |         |
-   | ug/m3     | micrograms per  | kg/m3 | 1e-9      | 0     | RFCthis |
-   |           | cubic meter     |       |           |       |         |
-   | mm/h      | millimeter per  | m/s   | 1/3600000 | 0     | RFCthis |
-   |           | hour            |       |           |       |         |
-   | ppm       | parts per       | /     | 1e-6      | 0     | RFCthis |
-   |           | million         |       |           |       |         |
-   | hPa       | hectopascal     | Pa    | 100       | 0     | RFCthis |
-   | mm        | millimeter      | m     | 1/1000    | 0     | RFCthis |
-   +-----------+-----------------+-------+-----------+-------+---------+
+   The initial content of the secondary units registry is provided in
+   Table 2:
+
+   +----------+--------------------+------+-----------+------+---------+
+   | secondar | description        | SenM | scale     | off- | refer-  |
+   | y unit   |                    | L    |           | set  | ence    |
+   |          |                    | unit |           |      |         |
+   +----------+--------------------+------+-----------+------+---------+
+   | ms       | millisecond        | s    | 1/1000    | 0    | RFCthis |
+   | min      | minute             | s    | 60        | 0    | RFCthis |
+   | h        | hour               | s    | 3600      | 0    | RFCthis |
+   | kW       | kilowatt           | W    | 1000      | 0    | RFCthis |
+   | kVA      | kilovolt-ampere    | VA   | 1000      | 0    | RFCthis |
+   | kvar     | kilovar            | var  | 1000      | 0    | RFCthis |
+   | Ah       | ampere-hour        | C    | 3600      | 0    | RFCthis |
+   | Wh       | watt-hour          | J    | 3600      | 0    | RFCthis |
+   | kWh      | kilowatt-hour      | J    | 3600000   | 0    | RFCthis |
+   | varh     | var-hour           | vars | 3600      | 0    | RFCthis |
+   | kvarh    | kilovar-hour       | vars | 3600000   | 0    | RFCthis |
+   | kVAh     | kilovolt-ampere-   | VAs  | 3600000   | 0    | RFCthis |
+   |          | hour               |      |           |      |         |
+   | Wh/km    | watts-hour per     | J/m  | 3.6       | 0    | RFCthis |
+   |          | kilometer          |      |           |      |         |
+   | KiB      | kibibyte           | B    | 1024      | 0    | RFCthis |
+   | mV       | millivolt          | V    | 1/1000    | 0    | RFCthis |
+   | mA       | milliampere        | A    | 1/1000    | 0    | RFCthis |
+   | dBm      | decibel            | dBW  | 1         | -30  | RFCthis |
+   |          | (milliwatt)        |      |           |      |         |
+   | ug/m3    | micrograms per     | kg/m | 1e-9      | 0    | RFCthis |
+   |          | cubic meter        | 3    |           |      |         |
+   | mm/h     | millimeter per     | m/s  | 1/3600000 | 0    | RFCthis |
+   |          | hour               |      |           |      |         |
+   | ppm      | parts per million  | /    | 1e-6      | 0    | RFCthis |
+   | hPa      | hectopascal        | Pa   | 100       | 0    | RFCthis |
+   | mm       | millimeter         | m    | 1/1000    | 0    | RFCthis |
+   | km       | kilometer          | km   | 1000      | 0    | RFCthis |
+   | km/h     | kilometer per hour | m/s  | 1/3.6     | 0    | RFCthis |
+   | rpm      | (revolutions) per  | 1/s  | 1/60      | 0    | RFCthis |
+   |          | minute             |      |           |      |         |
+   +----------+--------------------+------+-----------+------+---------+
 
                Table 2: Secondary units registered for SenML
 
@@ -263,6 +273,15 @@ Internet-Draft         Additional Units for SenML         September 2019
    by 1/1000, yielding the number 0.1, and then the offset 0 is added,
    yielding the number 0.1 again, leading to a quantity of 0.1 s.  The
    value of a quantity given as 10 dBm is first multiplied by 1,
+
+
+
+
+Bormann                  Expires March 27, 2020                 [Page 5]
+
+Internet-Draft         Additional Units for SenML         September 2019
+
+
    yielding the number 10, and then the offset -30 is added, yielding
    the number -20, leading to a quantity of -20 dBW.
 
@@ -273,14 +292,6 @@ Internet-Draft         Additional Units for SenML         September 2019
    Guidelines to the difference between units (which can go into the
    registry) and quantities are widely available, see for instance [RS]
    and [BIPM].
-
-
-
-
-Bormann                  Expires March 27, 2020                 [Page 5]
-
-Internet-Draft         Additional Units for SenML         September 2019
-
 
    SenML packs MAY, but SHOULD NOT, use secondary units in place of
    SenML units, where the exception of the "SHOULD NOT" lies in the
@@ -318,6 +329,15 @@ Acknowledgements
               "Quantities and units - Part 6: Electromagnetism",
               IEC 80000-6, Edition 1.0, March 2008.
 
+
+
+
+
+Bormann                  Expires March 27, 2020                 [Page 6]
+
+Internet-Draft         Additional Units for SenML         September 2019
+
+
    [IEEE-1459]
               "IEEE Standard Definitions for the Measurement of Electric
               Power Quantities Under Sinusoidal, Nonsinusoidal,
@@ -328,15 +348,6 @@ Acknowledgements
               Requirement Levels", BCP 14, RFC 2119,
               DOI 10.17487/RFC2119, March 1997,
               <https://www.rfc-editor.org/info/rfc2119>.
-
-
-
-
-
-Bormann                  Expires March 27, 2020                 [Page 6]
-
-Internet-Draft         Additional Units for SenML         September 2019
-
 
    [RFC8126]  Cotton, M., Leiba, B., and T. Narten, "Guidelines for
               Writing an IANA Considerations Section in RFCs", BCP 26,
@@ -375,17 +386,6 @@ Author's Address
 
    Phone: +49-421-218-63921
    Email: cabo@tzi.org
-
-
-
-
-
-
-
-
-
-
-
 
 
 
