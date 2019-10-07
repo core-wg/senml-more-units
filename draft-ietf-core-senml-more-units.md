@@ -123,6 +123,7 @@ subregistry of the SenML registry {{IANA.senml}} (as defined in {{RFC8428}}):
 |--------+------------------------------------------------+-------+-----------|
 | B      | Byte (information content)                     | float | RFCthis   |
 | VA     | volt-ampere (Apparent Power)                   | float | RFCthis   |
+| VAs    | volt-ampere seconds (Apparent Energy)          | float | RFCthis   |
 | var    | volt-ampere reactive (Reactive Power)          | float | RFCthis   |
 | vars   | volt-ampere reactive seconds (Reactive Energy) | float | RFCthis   |
 | J/m    | joule per meter (Energy per distance)          | float | RFCthis   |
@@ -207,6 +208,8 @@ The initial content of the secondary units registry is provided in {{secondary-u
 | Wh             | watt-hour                  | J          |      3600 |        0 | RFCthis     |
 | kWh            | kilowatt-hour              | J          |   3600000 |        0 | RFCthis     |
 | varh           | var-hour                   | vars       |      3600 |        0 | RFCthis     |
+| kvarh          | kilovar-hour               | vars       |   3600000 |        0 | RFCthis     |
+| kVAh           | kilovolt-ampere-hour       | VAs        |   3600000 |        0 | RFCthis     |
 | Wh/km          | watts-hour per kilometer   | J/m        |       3.6 |        0 | RFCthis     |
 | KiB            | kibibyte                   | B          |      1024 |        0 | RFCthis     |
 | mV             | millivolt                  | V          |    1/1000 |        0 | RFCthis     |
@@ -217,6 +220,9 @@ The initial content of the secondary units registry is provided in {{secondary-u
 | ppm            | parts per million          | /          |      1e-6 |        0 | RFCthis     |
 | hPa            | hectopascal                | Pa         |       100 |        0 | RFCthis     |
 | mm             | millimeter                 | m          |    1/1000 |        0 | RFCthis     |
+| km             | kilometer                  | km         |      1000 |        0 | RFCthis     |
+| km/h           | kilometer per hour         | m/s        |     1/3.6 |        0 | RFCthis     |
+| rpm            | (revolutions) per minute   | 1/s        |      1/60 |        0 | RFCthis     |
 {: #secondary-unit-tbl title="Secondary units registered for SenML"}
 
 Example: the value of a quantity given as 100 ms is first multiplied
