@@ -259,5 +259,7 @@ See {{new-units}} and {{new-registry}}.
 {: numbered="no"}
 
 Ari Keranen pointed out the need for additional units in SenML.
+Comments provided by him as well as by Thomas Fossati, Joaquin Prado,
+and Jaime Jimenez helped improve the document.
 
 --- back
