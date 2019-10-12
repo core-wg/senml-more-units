@@ -197,7 +197,7 @@ then adding the offset, yielding the value in the given SenML unit.
 
 The initial content of the secondary units registry is provided in {{secondary-unit-tbl}}:
 
-| secondary unit | description                | SenML unit |     scale | off- set | refer- ence |
+| secondary unit | description                | SenML unit |     scale | off set  | refer- ence |
 | ms             | millisecond                | s          |    1/1000 |        0 | RFCthis     |
 | min            | minute                     | s          |        60 |        0 | RFCthis     |
 | h              | hour                       | s          |      3600 |        0 | RFCthis     |
@@ -222,7 +222,8 @@ The initial content of the secondary units registry is provided in {{secondary-u
 | mm             | millimeter                 | m          |    1/1000 |        0 | RFCthis     |
 | km             | kilometer                  | km         |      1000 |        0 | RFCthis     |
 | km/h           | kilometer per hour         | m/s        |     1/3.6 |        0 | RFCthis     |
-{: #secondary-unit-tbl title="Secondary units registered for SenML"}
+{: #secondary-unit-tbl title="Secondary units registered for SenML"
+cols="9l l 6l 9r r l"}
 
 Example: the value of a quantity given as 100 ms is first multiplied
 by 1/1000, yielding the number 0.1, and then the offset 0 is added,
