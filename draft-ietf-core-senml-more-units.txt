@@ -4,9 +4,9 @@
 
 Network Working Group                                         C. Bormann
 Internet-Draft                                   Universitaet Bremen TZI
-Updates: 8428 (if approved)                             October 07, 2019
+Updates: 8428 (if approved)                             October 12, 2019
 Intended status: Standards Track
-Expires: April 9, 2020
+Expires: April 14, 2020
 
 
                        Additional Units for SenML
@@ -37,7 +37,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on April 9, 2020.
+   This Internet-Draft will expire on April 14, 2020.
 
 Copyright Notice
 
@@ -53,7 +53,7 @@ Copyright Notice
 
 
 
-Bormann                   Expires April 9, 2020                 [Page 1]
+Bormann                  Expires April 14, 2020                 [Page 1]
 
 Internet-Draft         Additional Units for SenML           October 2019
 
@@ -109,7 +109,7 @@ Table of Contents
 
 
 
-Bormann                   Expires April 9, 2020                 [Page 2]
+Bormann                  Expires April 14, 2020                 [Page 2]
 
 Internet-Draft         Additional Units for SenML           October 2019
 
@@ -165,7 +165,7 @@ Internet-Draft         Additional Units for SenML           October 2019
 
 
 
-Bormann                   Expires April 9, 2020                 [Page 3]
+Bormann                  Expires April 14, 2020                 [Page 3]
 
 Internet-Draft         Additional Units for SenML           October 2019
 
@@ -221,7 +221,7 @@ Internet-Draft         Additional Units for SenML           October 2019
 
 
 
-Bormann                   Expires April 9, 2020                 [Page 4]
+Bormann                  Expires April 14, 2020                 [Page 4]
 
 Internet-Draft         Additional Units for SenML           October 2019
 
@@ -229,43 +229,41 @@ Internet-Draft         Additional Units for SenML           October 2019
    The initial content of the secondary units registry is provided in
    Table 2:
 
-   +----------+--------------------+------+-----------+------+---------+
-   | secondar | description        | SenM | scale     | off- | refer-  |
-   | y unit   |                    | L    |           | set  | ence    |
-   |          |                    | unit |           |      |         |
-   +----------+--------------------+------+-----------+------+---------+
-   | ms       | millisecond        | s    | 1/1000    | 0    | RFCthis |
-   | min      | minute             | s    | 60        | 0    | RFCthis |
-   | h        | hour               | s    | 3600      | 0    | RFCthis |
-   | kW       | kilowatt           | W    | 1000      | 0    | RFCthis |
-   | kVA      | kilovolt-ampere    | VA   | 1000      | 0    | RFCthis |
-   | kvar     | kilovar            | var  | 1000      | 0    | RFCthis |
-   | Ah       | ampere-hour        | C    | 3600      | 0    | RFCthis |
-   | Wh       | watt-hour          | J    | 3600      | 0    | RFCthis |
-   | kWh      | kilowatt-hour      | J    | 3600000   | 0    | RFCthis |
-   | varh     | var-hour           | vars | 3600      | 0    | RFCthis |
-   | kvarh    | kilovar-hour       | vars | 3600000   | 0    | RFCthis |
-   | kVAh     | kilovolt-ampere-   | VAs  | 3600000   | 0    | RFCthis |
-   |          | hour               |      |           |      |         |
-   | Wh/km    | watts-hour per     | J/m  | 3.6       | 0    | RFCthis |
-   |          | kilometer          |      |           |      |         |
-   | KiB      | kibibyte           | B    | 1024      | 0    | RFCthis |
-   | mV       | millivolt          | V    | 1/1000    | 0    | RFCthis |
-   | mA       | milliampere        | A    | 1/1000    | 0    | RFCthis |
-   | dBm      | decibel            | dBW  | 1         | -30  | RFCthis |
-   |          | (milliwatt)        |      |           |      |         |
-   | ug/m3    | micrograms per     | kg/m | 1e-9      | 0    | RFCthis |
-   |          | cubic meter        | 3    |           |      |         |
-   | mm/h     | millimeter per     | m/s  | 1/3600000 | 0    | RFCthis |
-   |          | hour               |      |           |      |         |
-   | ppm      | parts per million  | /    | 1e-6      | 0    | RFCthis |
-   | hPa      | hectopascal        | Pa   | 100       | 0    | RFCthis |
-   | mm       | millimeter         | m    | 1/1000    | 0    | RFCthis |
-   | km       | kilometer          | km   | 1000      | 0    | RFCthis |
-   | km/h     | kilometer per hour | m/s  | 1/3.6     | 0    | RFCthis |
-   | rpm      | (revolutions) per  | 1/s  | 1/60      | 0    | RFCthis |
-   |          | minute             |      |           |      |         |
-   +----------+--------------------+------+-----------+------+---------+
+   +-----------+-------------------+-------+-----------+-----+---------+
+   | secondary | description       | SenML |     scale | off | refer-  |
+   | unit      |                   | unit  |           | set | ence    |
+   +-----------+-------------------+-------+-----------+-----+---------+
+   | ms        | millisecond       | s     |    1/1000 |   0 | RFCthis |
+   | min       | minute            | s     |        60 |   0 | RFCthis |
+   | h         | hour              | s     |      3600 |   0 | RFCthis |
+   | kW        | kilowatt          | W     |      1000 |   0 | RFCthis |
+   | kVA       | kilovolt-ampere   | VA    |      1000 |   0 | RFCthis |
+   | kvar      | kilovar           | var   |      1000 |   0 | RFCthis |
+   | Ah        | ampere-hour       | C     |      3600 |   0 | RFCthis |
+   | Wh        | watt-hour         | J     |      3600 |   0 | RFCthis |
+   | kWh       | kilowatt-hour     | J     |   3600000 |   0 | RFCthis |
+   | varh      | var-hour          | vars  |      3600 |   0 | RFCthis |
+   | kvarh     | kilovar-hour      | vars  |   3600000 |   0 | RFCthis |
+   | kVAh      | kilovolt-ampere-  | VAs   |   3600000 |   0 | RFCthis |
+   |           | hour              |       |           |     |         |
+   | Wh/km     | watts-hour per    | J/m   |       3.6 |   0 | RFCthis |
+   |           | kilometer         |       |           |     |         |
+   | KiB       | kibibyte          | B     |      1024 |   0 | RFCthis |
+   | mV        | millivolt         | V     |    1/1000 |   0 | RFCthis |
+   | mA        | milliampere       | A     |    1/1000 |   0 | RFCthis |
+   | dBm       | decibel           | dBW   |         1 | -30 | RFCthis |
+   |           | (milliwatt)       |       |           |     |         |
+   | ug/m3     | micrograms per    | kg/m3 |      1e-9 |   0 | RFCthis |
+   |           | cubic meter       |       |           |     |         |
+   | mm/h      | millimeter per    | m/s   | 1/3600000 |   0 | RFCthis |
+   |           | hour              |       |           |     |         |
+   | ppm       | parts per million | /     |      1e-6 |   0 | RFCthis |
+   | hPa       | hectopascal       | Pa    |       100 |   0 | RFCthis |
+   | mm        | millimeter        | m     |    1/1000 |   0 | RFCthis |
+   | km        | kilometer         | km    |      1000 |   0 | RFCthis |
+   | km/h      | kilometer per     | m/s   |     1/3.6 |   0 | RFCthis |
+   |           | hour              |       |           |     |         |
+   +-----------+-------------------+-------+-----------+-----+---------+
 
                Table 2: Secondary units registered for SenML
 
@@ -273,17 +271,16 @@ Internet-Draft         Additional Units for SenML           October 2019
    by 1/1000, yielding the number 0.1, and then the offset 0 is added,
    yielding the number 0.1 again, leading to a quantity of 0.1 s.  The
    value of a quantity given as 10 dBm is first multiplied by 1,
+   yielding the number 10, and then the offset -30 is added, yielding
+   the number -20, leading to a quantity of -20 dBW.
 
 
 
 
-Bormann                   Expires April 9, 2020                 [Page 5]
+Bormann                  Expires April 14, 2020                 [Page 5]
 
 Internet-Draft         Additional Units for SenML           October 2019
 
-
-   yielding the number 10, and then the offset -30 is added, yielding
-   the number -20, leading to a quantity of -20 dBW.
 
    New entries can be added to the registration by Expert Review as
    defined in [RFC8126].  Experts should exercise their own good
@@ -312,6 +309,8 @@ Internet-Draft         Additional Units for SenML           October 2019
 Acknowledgements
 
    Ari Keranen pointed out the need for additional units in SenML.
+   Comments provided by him as well as by Thomas Fossati, Joaquin Prado,
+   and Jaime Jimenez helped improve the document.
 
 8.  References
 
@@ -333,7 +332,8 @@ Acknowledgements
 
 
 
-Bormann                   Expires April 9, 2020                 [Page 6]
+
+Bormann                  Expires April 14, 2020                 [Page 6]
 
 Internet-Draft         Additional Units for SenML           October 2019
 
@@ -389,4 +389,4 @@ Author's Address
 
 
 
-Bormann                   Expires April 9, 2020                 [Page 7]
+Bormann                  Expires April 14, 2020                 [Page 7]
