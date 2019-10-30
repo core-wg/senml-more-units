@@ -123,12 +123,12 @@ subregistry of the SenML registry {{IANA.senml}} (as defined in {{RFC8428}}):
 |--------+------------------------------------------------+-------+-----------|
 | B      | Byte (information content)                     | float | RFCthis   |
 | VA     | volt-ampere (Apparent Power)                   | float | RFCthis   |
-| VAs    | volt-ampere seconds (Apparent Energy)          | float | RFCthis   |
+| VAs    | volt-ampere second (Apparent Energy)           | float | RFCthis   |
 | var    | volt-ampere reactive (Reactive Power)          | float | RFCthis   |
-| vars   | volt-ampere reactive seconds (Reactive Energy) | float | RFCthis   |
+| vars   | volt-ampere reactive second (Reactive Energy)  | float | RFCthis   |
 | J/m    | joule per meter (Energy per distance)          | float | RFCthis   |
-| kg/m3  | kilograms per cubic meter (mass concentration) | float | RFCthis   |
-| deg    | degrees (angle)*                               | float | RFCthis   |
+| kg/m3  | kilogram per cubic meter (mass concentration)  | float | RFCthis   |
+| deg    | degree (angle)*                                | float | RFCthis   |
 {: #new-unit-tbl title="New units registered for SenML"}
 
 # Rationale
@@ -210,12 +210,12 @@ The initial content of the secondary units registry is provided in {{secondary-u
 | varh           | var-hour                   | vars       |      3600 |       0 | RFCthis     |
 | kvarh          | kilovar-hour               | vars       |   3600000 |       0 | RFCthis     |
 | kVAh           | kilovolt-ampere-hour       | VAs        |   3600000 |       0 | RFCthis     |
-| Wh/km          | watts-hour per kilometer   | J/m        |       3.6 |       0 | RFCthis     |
+| Wh/km          | watt-hour per kilometer    | J/m        |       3.6 |       0 | RFCthis     |
 | KiB            | kibibyte                   | B          |      1024 |       0 | RFCthis     |
 | mV             | millivolt                  | V          |    1/1000 |       0 | RFCthis     |
 | mA             | milliampere                | A          |    1/1000 |       0 | RFCthis     |
 | dBm            | decibel (milliwatt)        | dBW        |         1 |     -30 | RFCthis     |
-| ug/m3          | micrograms per cubic meter | kg/m3      |      1e-9 |       0 | RFCthis     |
+| ug/m3          | microgram per cubic meter  | kg/m3      |      1e-9 |       0 | RFCthis     |
 | mm/h           | millimeter per hour        | m/s        | 1/3600000 |       0 | RFCthis     |
 | ppm            | parts per million          | /          |      1e-6 |       0 | RFCthis     |
 | /100           | percent (Note 1)           | /          |     1/100 |       0 | RFCthis     |
@@ -249,6 +249,8 @@ Guidelines to the difference between units (which can go into the
 registry) and quantities are widely available, see for instance {{RS}}
 and {{BIPM}}.
 
+<!-- benefits of using the first one: can compare right away, no -->
+<!-- normalization step; but normalization is not that hard either -->
 SenML packs MAY, but SHOULD NOT, use secondary units in place of SenML
 units, where the exception of the "SHOULD NOT" lies in the context of
 specific existing data models that are based on these secondary units.
