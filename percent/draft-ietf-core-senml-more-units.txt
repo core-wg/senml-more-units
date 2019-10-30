@@ -74,7 +74,7 @@ Table of Contents
    8.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   6
      8.1.  Normative References  . . . . . . . . . . . . . . . . . .   6
      8.2.  Informative References  . . . . . . . . . . . . . . . . .   7
-   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   8
+   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   7
 
 1.  Introduction
 
@@ -125,17 +125,16 @@ Internet-Draft         Additional Units for SenML           October 2019
    +--------+--------------------------------------+-------+-----------+
    | B      | Byte (information content)           | float | RFCthis   |
    | VA     | volt-ampere (Apparent Power)         | float | RFCthis   |
-   | VAs    | volt-ampere seconds (Apparent        | float | RFCthis   |
-   |        | Energy)                              |       |           |
+   | VAs    | volt-ampere second (Apparent Energy) | float | RFCthis   |
    | var    | volt-ampere reactive (Reactive       | float | RFCthis   |
    |        | Power)                               |       |           |
-   | vars   | volt-ampere reactive seconds         | float | RFCthis   |
+   | vars   | volt-ampere reactive second          | float | RFCthis   |
    |        | (Reactive Energy)                    |       |           |
    | J/m    | joule per meter (Energy per          | float | RFCthis   |
    |        | distance)                            |       |           |
-   | kg/m3  | kilograms per cubic meter (mass      | float | RFCthis   |
+   | kg/m3  | kilogram per cubic meter (mass       | float | RFCthis   |
    |        | concentration)                       |       |           |
-   | deg    | degrees (angle)*                     | float | RFCthis   |
+   | deg    | degree (angle)*                      | float | RFCthis   |
    +--------+--------------------------------------+-------+-----------+
 
                   Table 1: New units registered for SenML
@@ -161,7 +160,8 @@ Internet-Draft         Additional Units for SenML           October 2019
       potentially confusing, the situation is widely understood in
       engineering circles and is unlikely to cause actual problems.
 
-
+   o  The Volt-Ampere.  [IEC-80000-6]} item 6-57.a defines the VA (volt
+      ampere) as a unit for apparent power; items 6-59.a, 6-60.a and
 
 
 
@@ -170,8 +170,6 @@ Bormann                  Expires April 23, 2020                 [Page 3]
 Internet-Draft         Additional Units for SenML           October 2019
 
 
-   o  The Volt-Ampere.  [IEC-80000-6]} item 6-57.a defines the VA (volt
-      ampere) as a unit for apparent power; items 6-59.a, 6-60.a and
       6-61.a also use the unit for complex, reactive, and non-active
       power.
 
@@ -218,6 +216,8 @@ Internet-Draft         Additional Units for SenML           October 2019
    SenML unit by first multiplying their value with the scale number and
    then adding the offset, yielding the value in the given SenML unit.
 
+   The initial content of the secondary units registry is provided in
+   Table 2:
 
 
 
@@ -225,9 +225,6 @@ Bormann                  Expires April 23, 2020                 [Page 4]
 
 Internet-Draft         Additional Units for SenML           October 2019
 
-
-   The initial content of the secondary units registry is provided in
-   Table 2:
 
    +-----------+-------------------+-------+-----------+-----+---------+
    | secondary | description       | SenML |     scale | off | refer-  |
@@ -246,14 +243,14 @@ Internet-Draft         Additional Units for SenML           October 2019
    | kvarh     | kilovar-hour      | vars  |   3600000 |   0 | RFCthis |
    | kVAh      | kilovolt-ampere-  | VAs   |   3600000 |   0 | RFCthis |
    |           | hour              |       |           |     |         |
-   | Wh/km     | watts-hour per    | J/m   |       3.6 |   0 | RFCthis |
+   | Wh/km     | watt-hour per     | J/m   |       3.6 |   0 | RFCthis |
    |           | kilometer         |       |           |     |         |
    | KiB       | kibibyte          | B     |      1024 |   0 | RFCthis |
    | mV        | millivolt         | V     |    1/1000 |   0 | RFCthis |
    | mA        | milliampere       | A     |    1/1000 |   0 | RFCthis |
    | dBm       | decibel           | dBW   |         1 | -30 | RFCthis |
    |           | (milliwatt)       |       |           |     |         |
-   | ug/m3     | micrograms per    | kg/m3 |      1e-9 |   0 | RFCthis |
+   | ug/m3     | microgram per     | kg/m3 |      1e-9 |   0 | RFCthis |
    |           | cubic meter       |       |           |     |         |
    | mm/h      | millimeter per    | m/s   | 1/3600000 |   0 | RFCthis |
    |           | hour              |       |           |     |         |
@@ -273,6 +270,9 @@ Internet-Draft         Additional Units for SenML           October 2019
    this name has been taken in [RFC8428] already, where it is a NOT
    RECOMMENDED synonym for "/" (unity) for legacy reasons.  Note that
    the presence of both "%" and "/100" with different meanings is likely
+   to create confusion, so the present document adds some weight to the
+   recommendation against using the counterintuitive unit name "%".
+
 
 
 
@@ -281,9 +281,6 @@ Bormann                  Expires April 23, 2020                 [Page 5]
 
 Internet-Draft         Additional Units for SenML           October 2019
 
-
-   to create confusion, so the present document adds some weight to the
-   recommendation against using the counterintuitive unit name "%".
 
    Example: the value of a quantity given as 100 ms is first multiplied
    by 1/1000, yielding the number 0.1, and then the offset 0 is added,
@@ -330,6 +327,9 @@ Acknowledgements
               IANA, "Sensor Measurement Lists (SenML)",
               <http://www.iana.org/assignments/senml>.
 
+   [IEC-80000-13]
+              "Quantities and units - Part 13: Information science and
+              technology", IEC 80000-13, Edition 1.0, March 2008.
 
 
 
@@ -337,10 +337,6 @@ Bormann                  Expires April 23, 2020                 [Page 6]
 
 Internet-Draft         Additional Units for SenML           October 2019
 
-
-   [IEC-80000-13]
-              "Quantities and units - Part 13: Information science and
-              technology", IEC 80000-13, Edition 1.0, March 2008.
 
    [IEC-80000-6]
               "Quantities and units - Part 6: Electromagnetism",
@@ -384,6 +380,10 @@ Internet-Draft         Additional Units for SenML           October 2019
               Standard-compliant_usage_of_quantities_units_and_equations
               _bro_en_5214-5061-62_v0400_96dpi.pdf>.
 
+Author's Address
+
+
+
 
 
 
@@ -394,8 +394,6 @@ Bormann                  Expires April 23, 2020                 [Page 7]
 Internet-Draft         Additional Units for SenML           October 2019
 
 
-Author's Address
-
    Carsten Bormann
    Universitaet Bremen TZI
    Postfach 330440
@@ -404,6 +402,8 @@ Author's Address
 
    Phone: +49-421-218-63921
    Email: cabo@tzi.org
+
+
 
 
 
