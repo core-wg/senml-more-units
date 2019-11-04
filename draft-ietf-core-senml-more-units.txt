@@ -4,9 +4,9 @@
 
 Network Working Group                                         C. Bormann
 Internet-Draft                                   Universitaet Bremen TZI
-Updates: 8428 (if approved)                             October 21, 2019
+Updates: 8428 (if approved)                            November 04, 2019
 Intended status: Standards Track
-Expires: April 23, 2020
+Expires: May 7, 2020
 
 
                        Additional Units for SenML
@@ -37,7 +37,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on April 23, 2020.
+   This Internet-Draft will expire on May 7, 2020.
 
 Copyright Notice
 
@@ -53,9 +53,9 @@ Copyright Notice
 
 
 
-Bormann                  Expires April 23, 2020                 [Page 1]
+Bormann                    Expires May 7, 2020                  [Page 1]
 
-Internet-Draft         Additional Units for SenML           October 2019
+Internet-Draft         Additional Units for SenML          November 2019
 
 
    include Simplified BSD License text as described in Section 4.e of
@@ -109,9 +109,9 @@ Table of Contents
 
 
 
-Bormann                  Expires April 23, 2020                 [Page 2]
+Bormann                    Expires May 7, 2020                  [Page 2]
 
-Internet-Draft         Additional Units for SenML           October 2019
+Internet-Draft         Additional Units for SenML          November 2019
 
 
 2.  New Units
@@ -165,9 +165,9 @@ Internet-Draft         Additional Units for SenML           October 2019
 
 
 
-Bormann                  Expires April 23, 2020                 [Page 3]
+Bormann                    Expires May 7, 2020                  [Page 3]
 
-Internet-Draft         Additional Units for SenML           October 2019
+Internet-Draft         Additional Units for SenML          November 2019
 
 
       6-61.a also use the unit for complex, reactive, and non-active
@@ -221,9 +221,9 @@ Internet-Draft         Additional Units for SenML           October 2019
 
 
 
-Bormann                  Expires April 23, 2020                 [Page 4]
+Bormann                    Expires May 7, 2020                  [Page 4]
 
-Internet-Draft         Additional Units for SenML           October 2019
+Internet-Draft         Additional Units for SenML          November 2019
 
 
    +-----------+-------------------+-------+-----------+-----+---------+
@@ -277,9 +277,9 @@ Internet-Draft         Additional Units for SenML           October 2019
 
 
 
-Bormann                  Expires April 23, 2020                 [Page 5]
+Bormann                    Expires May 7, 2020                  [Page 5]
 
-Internet-Draft         Additional Units for SenML           October 2019
+Internet-Draft         Additional Units for SenML          November 2019
 
 
    Example: the value of a quantity given as 100 ms is first multiplied
@@ -333,9 +333,9 @@ Acknowledgements
 
 
 
-Bormann                  Expires April 23, 2020                 [Page 6]
+Bormann                    Expires May 7, 2020                  [Page 6]
 
-Internet-Draft         Additional Units for SenML           October 2019
+Internet-Draft         Additional Units for SenML          November 2019
 
 
    [IEC-80000-6]
@@ -389,9 +389,9 @@ Author's Address
 
 
 
-Bormann                  Expires April 23, 2020                 [Page 7]
+Bormann                    Expires May 7, 2020                  [Page 7]
 
-Internet-Draft         Additional Units for SenML           October 2019
+Internet-Draft         Additional Units for SenML          November 2019
 
 
    Carsten Bormann
@@ -445,4 +445,4 @@ Internet-Draft         Additional Units for SenML           October 2019
 
 
 
-Bormann                  Expires April 23, 2020                 [Page 8]
+Bormann                    Expires May 7, 2020                  [Page 8]
