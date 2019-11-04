@@ -19,7 +19,7 @@ pi:
   subcompact: 'no'
 title: Additional Units for SenML
 abbrev: Additional Units for SenML
-date: 2019-10-12
+date: 2019-10-21
 author:
 -
   ins: C. Bormann
@@ -123,12 +123,12 @@ subregistry of the SenML registry {{IANA.senml}} (as defined in {{RFC8428}}):
 |--------+------------------------------------------------+-------+-----------|
 | B      | Byte (information content)                     | float | RFCthis   |
 | VA     | volt-ampere (Apparent Power)                   | float | RFCthis   |
-| VAs    | volt-ampere seconds (Apparent Energy)          | float | RFCthis   |
+| VAs    | volt-ampere second (Apparent Energy)           | float | RFCthis   |
 | var    | volt-ampere reactive (Reactive Power)          | float | RFCthis   |
-| vars   | volt-ampere reactive seconds (Reactive Energy) | float | RFCthis   |
+| vars   | volt-ampere reactive second (Reactive Energy)  | float | RFCthis   |
 | J/m    | joule per meter (Energy per distance)          | float | RFCthis   |
-| kg/m3  | kilograms per cubic meter (mass concentration) | float | RFCthis   |
-| deg    | degrees (angle)*                               | float | RFCthis   |
+| kg/m3  | kilogram per cubic meter (mass concentration)  | float | RFCthis   |
+| deg    | degree (angle)*                                | float | RFCthis   |
 {: #new-unit-tbl title="New units registered for SenML"}
 
 # Rationale
@@ -197,33 +197,42 @@ then adding the offset, yielding the value in the given SenML unit.
 
 The initial content of the secondary units registry is provided in {{secondary-unit-tbl}}:
 
-| secondary unit | description                | SenML unit |     scale | off set  | refer- ence |
-| ms             | millisecond                | s          |    1/1000 |        0 | RFCthis     |
-| min            | minute                     | s          |        60 |        0 | RFCthis     |
-| h              | hour                       | s          |      3600 |        0 | RFCthis     |
-| kW             | kilowatt                   | W          |      1000 |        0 | RFCthis     |
-| kVA            | kilovolt-ampere            | VA         |      1000 |        0 | RFCthis     |
-| kvar           | kilovar                    | var        |      1000 |        0 | RFCthis     |
-| Ah             | ampere-hour                | C          |      3600 |        0 | RFCthis     |
-| Wh             | watt-hour                  | J          |      3600 |        0 | RFCthis     |
-| kWh            | kilowatt-hour              | J          |   3600000 |        0 | RFCthis     |
-| varh           | var-hour                   | vars       |      3600 |        0 | RFCthis     |
-| kvarh          | kilovar-hour               | vars       |   3600000 |        0 | RFCthis     |
-| kVAh           | kilovolt-ampere-hour       | VAs        |   3600000 |        0 | RFCthis     |
-| Wh/km          | watts-hour per kilometer   | J/m        |       3.6 |        0 | RFCthis     |
-| KiB            | kibibyte                   | B          |      1024 |        0 | RFCthis     |
-| mV             | millivolt                  | V          |    1/1000 |        0 | RFCthis     |
-| mA             | milliampere                | A          |    1/1000 |        0 | RFCthis     |
-| dBm            | decibel (milliwatt)        | dBW        |         1 |      -30 | RFCthis     |
-| ug/m3          | micrograms per cubic meter | kg/m3      |      1e-9 |        0 | RFCthis     |
-| mm/h           | millimeter per hour        | m/s        | 1/3600000 |        0 | RFCthis     |
-| ppm            | parts per million          | /          |      1e-6 |        0 | RFCthis     |
-| hPa            | hectopascal                | Pa         |       100 |        0 | RFCthis     |
-| mm             | millimeter                 | m          |    1/1000 |        0 | RFCthis     |
-| km             | kilometer                  | km         |      1000 |        0 | RFCthis     |
-| km/h           | kilometer per hour         | m/s        |     1/3.6 |        0 | RFCthis     |
+| secondary unit | description                | SenML unit |     scale | off set | refer- ence |
+| ms             | millisecond                | s          |    1/1000 |       0 | RFCthis     |
+| min            | minute                     | s          |        60 |       0 | RFCthis     |
+| h              | hour                       | s          |      3600 |       0 | RFCthis     |
+| kW             | kilowatt                   | W          |      1000 |       0 | RFCthis     |
+| kVA            | kilovolt-ampere            | VA         |      1000 |       0 | RFCthis     |
+| kvar           | kilovar                    | var        |      1000 |       0 | RFCthis     |
+| Ah             | ampere-hour                | C          |      3600 |       0 | RFCthis     |
+| Wh             | watt-hour                  | J          |      3600 |       0 | RFCthis     |
+| kWh            | kilowatt-hour              | J          |   3600000 |       0 | RFCthis     |
+| varh           | var-hour                   | vars       |      3600 |       0 | RFCthis     |
+| kvarh          | kilovar-hour               | vars       |   3600000 |       0 | RFCthis     |
+| kVAh           | kilovolt-ampere-hour       | VAs        |   3600000 |       0 | RFCthis     |
+| Wh/km          | watt-hour per kilometer    | J/m        |       3.6 |       0 | RFCthis     |
+| KiB            | kibibyte                   | B          |      1024 |       0 | RFCthis     |
+| mV             | millivolt                  | V          |    1/1000 |       0 | RFCthis     |
+| mA             | milliampere                | A          |    1/1000 |       0 | RFCthis     |
+| dBm            | decibel (milliwatt)        | dBW        |         1 |     -30 | RFCthis     |
+| ug/m3          | microgram per cubic meter  | kg/m3      |      1e-9 |       0 | RFCthis     |
+| mm/h           | millimeter per hour        | m/s        | 1/3600000 |       0 | RFCthis     |
+| ppm            | parts per million          | /          |      1e-6 |       0 | RFCthis     |
+| /100           | percent (Note 1)           | /          |     1/100 |       0 | RFCthis     |
+| /1000          | permille                   | /          |    1/1000 |       0 | RFCthis     |
+| hPa            | hectopascal                | Pa         |       100 |       0 | RFCthis     |
+| mm             | millimeter                 | m          |    1/1000 |       0 | RFCthis     |
+| km             | kilometer                  | km         |      1000 |       0 | RFCthis     |
+| km/h           | kilometer per hour         | m/s        |     1/3.6 |       0 | RFCthis     |
 {: #secondary-unit-tbl title="Secondary units registered for SenML"
 cols="9l l 6l 9r r l"}
+
+Note 1: This registration does not use the obvious name "%" because
+this name has been taken in {{-senml}} already, where it is a NOT
+RECOMMENDED synonym for "/" (unity) for legacy reasons.  Note that the
+presence of both "%" and "/100" with different meanings is likely to
+create confusion, so the present document adds some weight to the
+recommendation against using the counterintuitive unit name "%".
 
 Example: the value of a quantity given as 100 ms is first multiplied
 by 1/1000, yielding the number 0.1, and then the offset 0 is added,
@@ -240,6 +249,8 @@ Guidelines to the difference between units (which can go into the
 registry) and quantities are widely available, see for instance {{RS}}
 and {{BIPM}}.
 
+<!-- benefits of using the first one: can compare right away, no -->
+<!-- normalization step; but normalization is not that hard either -->
 SenML packs MAY, but SHOULD NOT, use secondary units in place of SenML
 units, where the exception of the "SHOULD NOT" lies in the context of
 specific existing data models that are based on these secondary units.
