@@ -1,6 +1,54 @@
 [
 
   {
+    "url": "https://api.github.com/repos/core-wg/senml-more-units/issues/4",
+    "repository_url": "https://api.github.com/repos/core-wg/senml-more-units",
+    "labels_url": "https://api.github.com/repos/core-wg/senml-more-units/issues/4/labels{/name}",
+    "comments_url": "https://api.github.com/repos/core-wg/senml-more-units/issues/4/comments",
+    "events_url": "https://api.github.com/repos/core-wg/senml-more-units/issues/4/events",
+    "html_url": "https://github.com/core-wg/senml-more-units/issues/4",
+    "id": 517304523,
+    "node_id": "MDU6SXNzdWU1MTczMDQ1MjM=",
+    "number": 4,
+    "title": "Language that permits usage of secondary registry in SenML",
+    "user": {
+      "login": "cabo",
+      "id": 23118,
+      "node_id": "MDQ6VXNlcjIzMTE4",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/23118?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/cabo",
+      "html_url": "https://github.com/cabo",
+      "followers_url": "https://api.github.com/users/cabo/followers",
+      "following_url": "https://api.github.com/users/cabo/following{/other_user}",
+      "gists_url": "https://api.github.com/users/cabo/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/cabo/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/cabo/subscriptions",
+      "organizations_url": "https://api.github.com/users/cabo/orgs",
+      "repos_url": "https://api.github.com/users/cabo/repos",
+      "events_url": "https://api.github.com/users/cabo/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/cabo/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "assignees": [
+
+    ],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2019-11-04T17:43:34Z",
+    "updated_at": "2019-11-04T17:43:34Z",
+    "closed_at": null,
+    "author_association": "MEMBER",
+    "body": "The secdir review did not like \"MAY, but SHOULD NOT\".\r\nHowever, the existing spec didn't allow using anything outside the primary registry at all, so some allowing language is needed.\r\nThere also is an ongoing discussion whether a secondary registry is the right approach, this is not the issue for that."
+  },
+  {
     "url": "https://api.github.com/repos/core-wg/senml-more-units/issues/3",
     "repository_url": "https://api.github.com/repos/core-wg/senml-more-units",
     "labels_url": "https://api.github.com/repos/core-wg/senml-more-units/issues/3/labels{/name}",
@@ -43,7 +91,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2019-10-21T08:28:50Z",
-    "updated_at": "2019-11-04T17:12:37Z",
+    "updated_at": "2019-11-04T17:15:52Z",
     "closed_at": "2019-11-04T17:12:37Z",
     "author_association": "MEMBER",
     "pull_request": {
