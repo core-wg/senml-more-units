@@ -212,16 +212,21 @@ The initial content of the secondary units registry is provided in {{secondary-u
 | kVAh           | kilovolt-ampere-hour       | VAs        |   3600000 |       0 | RFCthis     |
 | Wh/km          | watt-hour per kilometer    | J/m        |       3.6 |       0 | RFCthis     |
 | KiB            | kibibyte                   | B          |      1024 |       0 | RFCthis     |
+| GB             | gigabyte                   | B          |       1e9 |       0 | RFCthis     |
+| Mbit/s         | megabit per second         | bit/s      |   1000000 |       0 | RFCthis     |
+| MB/s           | megabyte per second        | bit/s      |   8000000 |       0 | RFCthis     |
 | mV             | millivolt                  | V          |    1/1000 |       0 | RFCthis     |
 | mA             | milliampere                | A          |    1/1000 |       0 | RFCthis     |
 | dBm            | decibel (milliwatt)        | dBW        |         1 |     -30 | RFCthis     |
 | ug/m3          | microgram per cubic meter  | kg/m3      |      1e-9 |       0 | RFCthis     |
 | mm/h           | millimeter per hour        | m/s        | 1/3600000 |       0 | RFCthis     |
+| m/h            | meter per hour             | m/s        |    1/3600 |       0 | RFCthis     |
 | ppm            | parts per million          | /          |      1e-6 |       0 | RFCthis     |
 | /100           | percent (Note 1)           | /          |     1/100 |       0 | RFCthis     |
 | /1000          | permille                   | /          |    1/1000 |       0 | RFCthis     |
 | hPa            | hectopascal                | Pa         |       100 |       0 | RFCthis     |
 | mm             | millimeter                 | m          |    1/1000 |       0 | RFCthis     |
+| cm             | centimeter                 | m          |     1/100 |       0 | RFCthis     |
 | km             | kilometer                  | km         |      1000 |       0 | RFCthis     |
 | km/h           | kilometer per hour         | m/s        |     1/3.6 |       0 | RFCthis     |
 {: #secondary-unit-tbl title="Secondary units registered for SenML"
