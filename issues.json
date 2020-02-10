@@ -1,6 +1,54 @@
 [
 
   {
+    "url": "https://api.github.com/repos/core-wg/senml-more-units/issues/5",
+    "repository_url": "https://api.github.com/repos/core-wg/senml-more-units",
+    "labels_url": "https://api.github.com/repos/core-wg/senml-more-units/issues/5/labels{/name}",
+    "comments_url": "https://api.github.com/repos/core-wg/senml-more-units/issues/5/comments",
+    "events_url": "https://api.github.com/repos/core-wg/senml-more-units/issues/5/events",
+    "html_url": "https://github.com/core-wg/senml-more-units/issues/5",
+    "id": 548125198,
+    "node_id": "MDU6SXNzdWU1NDgxMjUxOTg=",
+    "number": 5,
+    "title": "Ws (Watts per second) approved by OMA IPSO as a unit",
+    "user": {
+      "login": "jpradocueva",
+      "id": 3258579,
+      "node_id": "MDQ6VXNlcjMyNTg1Nzk=",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/3258579?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/jpradocueva",
+      "html_url": "https://github.com/jpradocueva",
+      "followers_url": "https://api.github.com/users/jpradocueva/followers",
+      "following_url": "https://api.github.com/users/jpradocueva/following{/other_user}",
+      "gists_url": "https://api.github.com/users/jpradocueva/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/jpradocueva/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/jpradocueva/subscriptions",
+      "organizations_url": "https://api.github.com/users/jpradocueva/orgs",
+      "repos_url": "https://api.github.com/users/jpradocueva/repos",
+      "events_url": "https://api.github.com/users/jpradocueva/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/jpradocueva/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "assignees": [
+
+    ],
+    "milestone": null,
+    "comments": 1,
+    "created_at": "2020-01-10T14:57:30Z",
+    "updated_at": "2020-01-11T21:52:40Z",
+    "closed_at": null,
+    "author_association": "NONE",
+    "body": "@cabo \"Ws\" doesn't appear in the https://github.com/core-wg/senml-more-units/blob/master/draft-ietf-core-senml-more-units.md when this unit will be added? At the moment we have a PR https://github.com/OpenMobileAlliance/lwm2m-registry/pull/404 failing validation because this unit (Ws) has not been confirmed to be part of the SenML Units Registry"
+  },
+  {
     "url": "https://api.github.com/repos/core-wg/senml-more-units/issues/4",
     "repository_url": "https://api.github.com/repos/core-wg/senml-more-units",
     "labels_url": "https://api.github.com/repos/core-wg/senml-more-units/issues/4/labels{/name}",
