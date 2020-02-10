@@ -4,7 +4,6 @@ ipr: trust200902
 docname: draft-ietf-core-senml-more-units-latest
 keyword: Internet-Draft
 cat: std
-updates: 8428
 pi:
   toc: 'yes'
   tocompact: 'yes'
@@ -86,7 +85,7 @@ This short document registers a number of additional unit names in the
 IANA registry for Units in SenML.
 It also defines a registry for secondary units that cannot be in SenML's
 main registry as they are derived by linear transformation from units
-already in that registry; RFC 8428 is updated to also accept these units.
+already in that registry.
 
 --- middle
 
@@ -108,9 +107,7 @@ Organizations (SDOs).
 
 The document also defines a registry for secondary Unit names that
 cannot be in SenML's main registry as they are derived by linear
-transformation from units already in that registry.  {{-senml}} is
-updated to also accept these secondary Unit names in place of the
-(primary) Unit names defined in {{-senml}}.
+transformation from units already in that registry.
 
 {::boilerplate bcp14}
 
@@ -249,16 +246,39 @@ number -20, leading to a quantity of -20 dBW.
 New entries can be added to the registration by Expert Review as
 defined in {{RFC8126}}.  Experts should exercise their own good
 judgment, with the same guidelines as used for SenML units (Section
-12.1 of {{RFC8428}}), but without applying the rules 4 and 5.
+12.1 of {{RFC8428}}), but without applying the rules 4, 5, and 8.
+Note that rule 7 limits the use of what could be understood as
+prefixes on their own, not the use of prefixes inside secondary unit
+names.
 Guidelines to the difference between units (which can go into the
 registry) and quantities are widely available, see for instance {{RS}}
 and {{BIPM}}.
 
 <!-- benefits of using the first one: can compare right away, no -->
 <!-- normalization step; but normalization is not that hard either -->
-SenML packs MAY, but SHOULD NOT, use secondary units in place of SenML
-units, where the exception of the "SHOULD NOT" lies in the context of
-specific existing data models that are based on these secondary units.
+As of SenML version 10 {{RFC8428}}, SenML packs are limited to
+using primary units in "u" fields.
+The use of secondary units in "u" fields MAY be enabled by indicating a new SenML
+version that specifically allows this and/or by using a field with a label name that ends with the "_"
+character ("must-understand" field) that specifically allows this.
+The definition of these versions and fields is outside the scope of
+the present specification.
+
+# Operational Considerations
+
+The secondary unit registry is expected to grow at a faster pace than
+the registry of primary unit names.  It also is amenable to automatic
+interpretation, by making use of the scale and offset columns.
+
+Implementers may be tempted to equip each instance of their systems
+with code to download new versions of the registry from IANA
+frequently, in order to be able to make use of newly defined secondary
+unit names.  This can create high load at IANA and a potential single
+point of failure.  Instead of pulling the registry in each individual
+instance of the code, the software update mechanism (or a similar,
+less frequently triggered mechanism) SHOULD be used to disseminate
+updated units registries obtained from IANA towards the instances via
+common repositories.
 
 # Security Considerations {#seccons}
 
