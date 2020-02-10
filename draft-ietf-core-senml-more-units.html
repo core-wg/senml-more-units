@@ -286,23 +286,24 @@ ul.toc li {
 <link href="#rfc.section.2" rel="Chapter" title="2 New Units">
 <link href="#rfc.section.3" rel="Chapter" title="3 Rationale">
 <link href="#rfc.section.4" rel="Chapter" title="4 New Registry">
-<link href="#rfc.section.5" rel="Chapter" title="5 Security Considerations">
-<link href="#rfc.section.6" rel="Chapter" title="6 IANA Considerations">
+<link href="#rfc.section.5" rel="Chapter" title="5 Operational Considerations">
+<link href="#rfc.section.6" rel="Chapter" title="6 Security Considerations">
+<link href="#rfc.section.7" rel="Chapter" title="7 IANA Considerations">
 <link href="#rfc.acknowledgements" rel="Chapter">
-<link href="#rfc.references" rel="Chapter" title="8 References">
-<link href="#rfc.references.1" rel="Chapter" title="8.1 Normative References">
-<link href="#rfc.references.2" rel="Chapter" title="8.2 Informative References">
+<link href="#rfc.references" rel="Chapter" title="9 References">
+<link href="#rfc.references.1" rel="Chapter" title="9.1 Normative References">
+<link href="#rfc.references.2" rel="Chapter" title="9.2 Informative References">
 <link href="#rfc.authors" rel="Chapter">
 
 
-  <meta name="generator" content="xml2rfc version 2.37.1 - https://tools.ietf.org/tools/xml2rfc" />
+  <meta name="generator" content="xml2rfc version 2.39.0 - https://tools.ietf.org/tools/xml2rfc" />
   <link rel="schema.dct" href="http://purl.org/dc/terms/" />
 
   <meta name="dct.creator" content="Bormann, C." />
   <meta name="dct.identifier" content="urn:ietf:id:draft-ietf-core-senml-more-units-latest" />
   <meta name="dct.issued" scheme="ISO8601" content="2019-11-04" />
-  <meta name="dct.abstract" content="The Sensor Measurement Lists (SenML) media type supports the indication of units for a quantity represented.  This short document registers a number of additional unit names in the IANA registry for Units in SenML.  It also defines a registry for secondary units that cannot be in SenML&#8217;s main registry as they are derived by linear transformation from units already in that registry; RFC 8428 is updated to also accept these units." />
-  <meta name="description" content="The Sensor Measurement Lists (SenML) media type supports the indication of units for a quantity represented.  This short document registers a number of additional unit names in the IANA registry for Units in SenML.  It also defines a registry for secondary units that cannot be in SenML&#8217;s main registry as they are derived by linear transformation from units already in that registry; RFC 8428 is updated to also accept these units." />
+  <meta name="dct.abstract" content="The Sensor Measurement Lists (SenML) media type supports the indication of units for a quantity represented.  This short document registers a number of additional unit names in the IANA registry for Units in SenML.  It also defines a registry for secondary units that cannot be in SenML&#8217;s main registry as they are derived by linear transformation from units already in that registry. " />
+  <meta name="description" content="The Sensor Measurement Lists (SenML) media type supports the indication of units for a quantity represented.  This short document registers a number of additional unit names in the IANA registry for Units in SenML.  It also defines a registry for secondary units that cannot be in SenML&#8217;s main registry as they are derived by linear transformation from units already in that registry. " />
 
 </head>
 
@@ -320,12 +321,8 @@ ul.toc li {
 <td class="right">Universitaet Bremen TZI</td>
 </tr>
 <tr>
-<td class="left">Updates: 8428 (if approved)</td>
-<td class="right">November 04, 2019</td>
-</tr>
-<tr>
 <td class="left">Intended status: Standards Track</td>
-<td class="right"></td>
+<td class="right">November 04, 2019</td>
 </tr>
 <tr>
 <td class="left">Expires: May 7, 2020</td>
@@ -340,7 +337,7 @@ ul.toc li {
   <span class="filename">draft-ietf-core-senml-more-units-latest</span></p>
   
   <h1 id="rfc.abstract"><a href="#rfc.abstract">Abstract</a></h1>
-<p>The Sensor Measurement Lists (SenML) media type supports the indication of units for a quantity represented.  This short document registers a number of additional unit names in the IANA registry for Units in SenML.  It also defines a registry for secondary units that cannot be in SenML&#8217;s main registry as they are derived by linear transformation from units already in that registry; RFC 8428 is updated to also accept these units.</p>
+<p>The Sensor Measurement Lists (SenML) media type supports the indication of units for a quantity represented.  This short document registers a number of additional unit names in the IANA registry for Units in SenML.  It also defines a registry for secondary units that cannot be in SenML&#8217;s main registry as they are derived by linear transformation from units already in that registry.</p>
 <h1 id="rfc.status"><a href="#rfc.status">Status of This Memo</a></h1>
 <p>This Internet-Draft is submitted in full conformance with the provisions of BCP 78 and BCP 79.</p>
 <p>Internet-Drafts are working documents of the Internet Engineering Task Force (IETF).  Note that other groups may also distribute working documents as Internet-Drafts.  The list of current Internet-Drafts is at https://datatracker.ietf.org/drafts/current/.</p>
@@ -363,17 +360,19 @@ ul.toc li {
 </li>
 <li>4.   <a href="#rfc.section.4">New Registry</a>
 </li>
-<li>5.   <a href="#rfc.section.5">Security Considerations</a>
+<li>5.   <a href="#rfc.section.5">Operational Considerations</a>
 </li>
-<li>6.   <a href="#rfc.section.6">IANA Considerations</a>
+<li>6.   <a href="#rfc.section.6">Security Considerations</a>
+</li>
+<li>7.   <a href="#rfc.section.7">IANA Considerations</a>
 </li>
 <li><a href="#rfc.acknowledgements">Acknowledgements</a>
 </li>
-<li>8.   <a href="#rfc.references">References</a>
+<li>9.   <a href="#rfc.references">References</a>
 </li>
-<ul><li>8.1.   <a href="#rfc.references.1">Normative References</a>
+<ul><li>9.1.   <a href="#rfc.references.1">Normative References</a>
 </li>
-<li>8.2.   <a href="#rfc.references.2">Informative References</a>
+<li>9.2.   <a href="#rfc.references.2">Informative References</a>
 </li>
 </ul><li><a href="#rfc.authors">Author's Address</a>
 </li>
@@ -386,7 +385,7 @@ ul.toc li {
 </h1>
 <p id="rfc.section.1.p.1">The Sensor Measurement Lists (SenML, <a href="#RFC8428" class="xref">[RFC8428]</a>) media type supports the indication of a unit, using the SenML field &#8220;u&#8221;, for the quantity given as a data value in a SenML record.   For this purpose, SenML defines an IANA registry of defined Unit names and their meanings; in the present document, we call the Unit names registered there &#8220;primary Unit names&#8221;.</p>
 <p id="rfc.section.1.p.2">This short document registers a number of additional units in the IANA registry for Units in SenML that appear to be necessary for further adopting SenML in other Standards Development Organizations (SDOs).</p>
-<p id="rfc.section.1.p.3">The document also defines a registry for secondary Unit names that cannot be in SenML&#8217;s main registry as they are derived by linear transformation from units already in that registry.  <a href="#RFC8428" class="xref">[RFC8428]</a> is updated to also accept these secondary Unit names in place of the (primary) Unit names defined in <a href="#RFC8428" class="xref">[RFC8428]</a>.</p>
+<p id="rfc.section.1.p.3">The document also defines a registry for secondary Unit names that cannot be in SenML&#8217;s main registry as they are derived by linear transformation from units already in that registry.</p>
 <p id="rfc.section.1.p.4">The key words &#8220;MUST&#8221;, &#8220;MUST NOT&#8221;, &#8220;REQUIRED&#8221;, &#8220;SHALL&#8221;, &#8220;SHALL NOT&#8221;, &#8220;SHOULD&#8221;, &#8220;SHOULD NOT&#8221;, &#8220;RECOMMENDED&#8221;, &#8220;NOT RECOMMENDED&#8221;, &#8220;MAY&#8221;, and &#8220;OPTIONAL&#8221; in this document are to be interpreted as described in BCP&#160;14 <a href="#RFC2119" class="xref">[RFC2119]</a> <a href="#RFC8174" class="xref">[RFC8174]</a> when, and only when, they appear in all capitals, as shown here.</p>
 <h1 id="rfc.section.2">
 <a href="#rfc.section.2">2.</a> <a href="#new-units" id="new-units">New Units</a>
@@ -748,22 +747,27 @@ ul.toc li {
 </table>
 <p id="rfc.section.4.p.6">Note 1: This registration does not use the obvious name &#8220;%&#8221; because this name has been taken in <a href="#RFC8428" class="xref">[RFC8428]</a> already, where it is a NOT RECOMMENDED synonym for &#8220;/&#8221; (unity) for legacy reasons.  Note that the presence of both &#8220;%&#8221; and &#8220;/100&#8221; with different meanings is likely to create confusion, so the present document adds some weight to the recommendation against using the counterintuitive unit name &#8220;%&#8221;.</p>
 <p id="rfc.section.4.p.7">Example: the value of a quantity given as 100 ms is first multiplied by 1/1000, yielding the number 0.1, and then the offset 0 is added, yielding the number 0.1 again, leading to a quantity of 0.1 s.  The value of a quantity given as 10 dBm is first multiplied by 1, yielding the number 10, and then the offset -30 is added, yielding the number -20, leading to a quantity of -20 dBW.</p>
-<p id="rfc.section.4.p.8">New entries can be added to the registration by Expert Review as defined in <a href="#RFC8126" class="xref">[RFC8126]</a>.  Experts should exercise their own good judgment, with the same guidelines as used for SenML units (Section 12.1 of <a href="#RFC8428" class="xref">[RFC8428]</a>), but without applying the rules 4 and 5.  Guidelines to the difference between units (which can go into the registry) and quantities are widely available, see for instance <a href="#RS" class="xref">[RS]</a> and <a href="#BIPM" class="xref">[BIPM]</a>.</p>
-<p id="rfc.section.4.p.9">SenML packs MAY, but SHOULD NOT, use secondary units in place of SenML units, where the exception of the &#8220;SHOULD NOT&#8221; lies in the context of specific existing data models that are based on these secondary units.</p>
+<p id="rfc.section.4.p.8">New entries can be added to the registration by Expert Review as defined in <a href="#RFC8126" class="xref">[RFC8126]</a>.  Experts should exercise their own good judgment, with the same guidelines as used for SenML units (Section 12.1 of <a href="#RFC8428" class="xref">[RFC8428]</a>), but without applying the rules 4, 5, and 8.  Note that rule 7 limits the use of what could be understood as prefixes on their own, not the use of prefixes inside secondary unit names.  Guidelines to the difference between units (which can go into the registry) and quantities are widely available, see for instance <a href="#RS" class="xref">[RS]</a> and <a href="#BIPM" class="xref">[BIPM]</a>.</p>
+<p id="rfc.section.4.p.9">As of SenML version 10 <a href="#RFC8428" class="xref">[RFC8428]</a>, SenML packs are limited to using primary units in &#8220;u&#8221; fields.  The use of secondary units in &#8220;u&#8221; fields MAY be enabled by indicating a new SenML version that specifically allows this and/or by using a field with a label name that ends with the &#8220;_&#8221; character (&#8220;must-understand&#8221; field) that specifically allows this.  The definition of these versions and fields is outside the scope of the present specification.</p>
 <h1 id="rfc.section.5">
-<a href="#rfc.section.5">5.</a> <a href="#seccons" id="seccons">Security Considerations</a>
+<a href="#rfc.section.5">5.</a> <a href="#operational-considerations" id="operational-considerations">Operational Considerations</a>
 </h1>
-<p id="rfc.section.5.p.1">The security considerations of <a href="#RFC8428" class="xref">[RFC8428]</a> apply.  The introduction of new measurement units poses no additional security considerations except from a possible potential for additional confusion about the proper unit to use.</p>
+<p id="rfc.section.5.p.1">The secondary unit registry is expected to grow at a faster pace than the registry of primary unit names.  It also is amenable to automatic interpretation, by making use of the scale and offset columns.</p>
+<p id="rfc.section.5.p.2">Implementers may be tempted to equip each instance of their systems with code to download new versions of the registry from IANA frequently, in order to be able to make use of newly defined secondary unit names.  This can create high load at IANA and a potential single point of failure.  Instead of pulling the registry in each individual instance of the code, the software update mechanism (or a similar, less frequently triggered mechanism) SHOULD be used to disseminate updated units registries obtained from IANA towards the instances via common repositories.</p>
 <h1 id="rfc.section.6">
-<a href="#rfc.section.6">6.</a> <a href="#iana" id="iana">IANA Considerations</a>
+<a href="#rfc.section.6">6.</a> <a href="#seccons" id="seccons">Security Considerations</a>
 </h1>
-<p id="rfc.section.6.p.1">See <a href="#new-units" class="xref">Section 2</a> and <a href="#new-registry" class="xref">Section 4</a>.</p>
+<p id="rfc.section.6.p.1">The security considerations of <a href="#RFC8428" class="xref">[RFC8428]</a> apply.  The introduction of new measurement units poses no additional security considerations except from a possible potential for additional confusion about the proper unit to use.</p>
+<h1 id="rfc.section.7">
+<a href="#rfc.section.7">7.</a> <a href="#iana" id="iana">IANA Considerations</a>
+</h1>
+<p id="rfc.section.7.p.1">See <a href="#new-units" class="xref">Section 2</a> and <a href="#new-registry" class="xref">Section 4</a>.</p>
 <h1 id="rfc.acknowledgements"><a href="#rfc.acknowledgements">Acknowledgements</a></h1>
-<p id="rfc.section.7.p.1">Ari Keranen pointed out the need for additional units in SenML.  Comments provided by him as well as by Thomas Fossati, Joaquin Prado, and Jaime Jimenez helped improve the document.</p>
+<p id="rfc.section.8.p.1">Ari Keranen pointed out the need for additional units in SenML.  Comments provided by him as well as by Thomas Fossati, Joaquin Prado, and Jaime Jimenez helped improve the document.</p>
 <h1 id="rfc.references">
-<a href="#rfc.references">8.</a> References</h1>
+<a href="#rfc.references">9.</a> References</h1>
 <h1 id="rfc.references.1">
-<a href="#rfc.references.1">8.1.</a> Normative References</h1>
+<a href="#rfc.references.1">9.1.</a> Normative References</h1>
 <table><tbody>
 <tr>
 <td class="reference"><b id="IANA.senml">[IANA.senml]</b></td>
@@ -804,7 +808,7 @@ ul.toc li {
 </tr>
 </tbody></table>
 <h1 id="rfc.references.2">
-<a href="#rfc.references.2">8.2.</a> Informative References</h1>
+<a href="#rfc.references.2">9.2.</a> Informative References</h1>
 <table><tbody>
 <tr>
 <td class="reference"><b id="BIPM">[BIPM]</b></td>

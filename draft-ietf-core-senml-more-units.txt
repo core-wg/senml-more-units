@@ -4,8 +4,7 @@
 
 Network Working Group                                         C. Bormann
 Internet-Draft                                   Universitaet Bremen TZI
-Updates: 8428 (if approved)                            November 04, 2019
-Intended status: Standards Track
+Intended status: Standards Track                       November 04, 2019
 Expires: May 7, 2020
 
 
@@ -19,8 +18,7 @@ Abstract
    registers a number of additional unit names in the IANA registry for
    Units in SenML.  It also defines a registry for secondary units that
    cannot be in SenML's main registry as they are derived by linear
-   transformation from units already in that registry; RFC 8428 is
-   updated to also accept these units.
+   transformation from units already in that registry.
 
 Status of This Memo
 
@@ -50,6 +48,8 @@ Copyright Notice
    publication of this document.  Please review these documents
    carefully, as they describe your rights and restrictions with respect
    to this document.  Code Components extracted from this document must
+   include Simplified BSD License text as described in Section 4.e of
+
 
 
 
@@ -58,22 +58,22 @@ Bormann                    Expires May 7, 2020                  [Page 1]
 Internet-Draft         Additional Units for SenML          November 2019
 
 
-   include Simplified BSD License text as described in Section 4.e of
    the Trust Legal Provisions and are provided without warranty as
    described in the Simplified BSD License.
 
 Table of Contents
 
    1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   2
-   2.  New Units . . . . . . . . . . . . . . . . . . . . . . . . . .   3
+   2.  New Units . . . . . . . . . . . . . . . . . . . . . . . . . .   2
    3.  Rationale . . . . . . . . . . . . . . . . . . . . . . . . . .   3
    4.  New Registry  . . . . . . . . . . . . . . . . . . . . . . . .   4
-   5.  Security Considerations . . . . . . . . . . . . . . . . . . .   6
-   6.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   6
-   Acknowledgements  . . . . . . . . . . . . . . . . . . . . . . . .   6
-   8.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   7
-     8.1.  Normative References  . . . . . . . . . . . . . . . . . .   7
-     8.2.  Informative References  . . . . . . . . . . . . . . . . .   7
+   5.  Operational Considerations  . . . . . . . . . . . . . . . . .   6
+   6.  Security Considerations . . . . . . . . . . . . . . . . . . .   7
+   7.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   7
+   Acknowledgements  . . . . . . . . . . . . . . . . . . . . . . . .   7
+   9.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   7
+     9.1.  Normative References  . . . . . . . . . . . . . . . . . .   7
+     9.2.  Informative References  . . . . . . . . . . . . . . . . .   8
    Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   8
 
 1.  Introduction
@@ -92,9 +92,7 @@ Table of Contents
 
    The document also defines a registry for secondary Unit names that
    cannot be in SenML's main registry as they are derived by linear
-   transformation from units already in that registry.  [RFC8428] is
-   updated to also accept these secondary Unit names in place of the
-   (primary) Unit names defined in [RFC8428].
+   transformation from units already in that registry.
 
    The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
    "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and
@@ -102,9 +100,11 @@ Table of Contents
    BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all
    capitals, as shown here.
 
+2.  New Units
 
-
-
+   IANA is requested to assign new units in the "SenML Units"
+   subregistry of the SenML registry [IANA.senml] (as defined in
+   [RFC8428]):
 
 
 
@@ -113,12 +113,6 @@ Bormann                    Expires May 7, 2020                  [Page 2]
 
 Internet-Draft         Additional Units for SenML          November 2019
 
-
-2.  New Units
-
-   IANA is requested to assign new units in the "SenML Units"
-   subregistry of the SenML registry [IANA.senml] (as defined in
-   [RFC8428]):
 
    +--------+--------------------------------------+-------+-----------+
    | Symbol | Description                          | Type  | Reference |
@@ -162,6 +156,12 @@ Internet-Draft         Additional Units for SenML          November 2019
 
    o  The Volt-Ampere.  [IEC-80000-6]} item 6-57.a defines the VA (volt
       ampere) as a unit for apparent power; items 6-59.a, 6-60.a and
+      6-61.a also use the unit for complex, reactive, and non-active
+      power.
+
+   o  The Volt-Ampere-reactive.  [IEC-80000-6] item 6-60.b defines the
+      var (volt ampere reactive) as an alternative (and fully
+      equivalent) unit to VA specifically for reactive power (with the
 
 
 
@@ -170,12 +170,6 @@ Bormann                    Expires May 7, 2020                  [Page 3]
 Internet-Draft         Additional Units for SenML          November 2019
 
 
-      6-61.a also use the unit for complex, reactive, and non-active
-      power.
-
-   o  The Volt-Ampere-reactive.  [IEC-80000-6] item 6-60.b defines the
-      var (volt ampere reactive) as an alternative (and fully
-      equivalent) unit to VA specifically for reactive power (with the
       primary unit VA).  It is not presently known to this author how
       the upcoming revision of IEC 80000-6 will update this, but it has
       became clear that there is strong interest in using this unit
@@ -218,6 +212,12 @@ Internet-Draft         Additional Units for SenML          November 2019
 
    The initial content of the secondary units registry is provided in
    Table 2:
+
+
+
+
+
+
 
 
 
@@ -299,36 +299,36 @@ Internet-Draft         Additional Units for SenML          November 2019
    New entries can be added to the registration by Expert Review as
    defined in [RFC8126].  Experts should exercise their own good
    judgment, with the same guidelines as used for SenML units
-   (Section 12.1 of [RFC8428]), but without applying the rules 4 and 5.
-   Guidelines to the difference between units (which can go into the
-   registry) and quantities are widely available, see for instance [RS]
-   and [BIPM].
+   (Section 12.1 of [RFC8428]), but without applying the rules 4, 5, and
+   8.  Note that rule 7 limits the use of what could be understood as
+   prefixes on their own, not the use of prefixes inside secondary unit
+   names.  Guidelines to the difference between units (which can go into
+   the registry) and quantities are widely available, see for instance
+   [RS] and [BIPM].
 
-   SenML packs MAY, but SHOULD NOT, use secondary units in place of
-   SenML units, where the exception of the "SHOULD NOT" lies in the
-   context of specific existing data models that are based on these
-   secondary units.
+   As of SenML version 10 [RFC8428], SenML packs are limited to using
+   primary units in "u" fields.  The use of secondary units in "u"
+   fields MAY be enabled by indicating a new SenML version that
+   specifically allows this and/or by using a field with a label name
+   that ends with the "_" character ("must-understand" field) that
+   specifically allows this.  The definition of these versions and
+   fields is outside the scope of the present specification.
 
-5.  Security Considerations
+5.  Operational Considerations
 
-   The security considerations of [RFC8428] apply.  The introduction of
-   new measurement units poses no additional security considerations
-   except from a possible potential for additional confusion about the
-   proper unit to use.
+   The secondary unit registry is expected to grow at a faster pace than
+   the registry of primary unit names.  It also is amenable to automatic
+   interpretation, by making use of the scale and offset columns.
 
-6.  IANA Considerations
-
-   See Section 2 and Section 4.
-
-Acknowledgements
-
-   Ari Keranen pointed out the need for additional units in SenML.
-   Comments provided by him as well as by Thomas Fossati, Joaquin Prado,
-   and Jaime Jimenez helped improve the document.
-
-
-
-
+   Implementers may be tempted to equip each instance of their systems
+   with code to download new versions of the registry from IANA
+   frequently, in order to be able to make use of newly defined
+   secondary unit names.  This can create high load at IANA and a
+   potential single point of failure.  Instead of pulling the registry
+   in each individual instance of the code, the software update
+   mechanism (or a similar, less frequently triggered mechanism) SHOULD
+   be used to disseminate updated units registries obtained from IANA
+   towards the instances via common repositories.
 
 
 
@@ -338,9 +338,26 @@ Bormann                    Expires May 7, 2020                  [Page 6]
 Internet-Draft         Additional Units for SenML          November 2019
 
 
-8.  References
+6.  Security Considerations
 
-8.1.  Normative References
+   The security considerations of [RFC8428] apply.  The introduction of
+   new measurement units poses no additional security considerations
+   except from a possible potential for additional confusion about the
+   proper unit to use.
+
+7.  IANA Considerations
+
+   See Section 2 and Section 4.
+
+Acknowledgements
+
+   Ari Keranen pointed out the need for additional units in SenML.
+   Comments provided by him as well as by Thomas Fossati, Joaquin Prado,
+   and Jaime Jimenez helped improve the document.
+
+9.  References
+
+9.1.  Normative References
 
    [IANA.senml]
               IANA, "Sensor Measurement Lists (SenML)",
@@ -370,6 +387,13 @@ Internet-Draft         Additional Units for SenML          November 2019
               RFC 8126, DOI 10.17487/RFC8126, June 2017,
               <https://www.rfc-editor.org/info/rfc8126>.
 
+
+
+Bormann                    Expires May 7, 2020                  [Page 7]
+
+Internet-Draft         Additional Units for SenML          November 2019
+
+
    [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/info/rfc8174>.
@@ -379,20 +403,12 @@ Internet-Draft         Additional Units for SenML          November 2019
               DOI 10.17487/RFC8428, August 2018,
               <https://www.rfc-editor.org/info/rfc8428>.
 
-8.2.  Informative References
+9.2.  Informative References
 
    [BIPM]     Bureau International des Poids es Mesures, "The
               International System of Units (SI), 9th edition", 2019,
               <https://www.bipm.org/utils/common/pdf/si-brochure/SI-
               Brochure-9-EN.pdf>.
-
-
-
-
-Bormann                    Expires May 7, 2020                  [Page 7]
-
-Internet-Draft         Additional Units for SenML          November 2019
-
 
    [RS]       Rohde&Schwarz, "Standard-compliant usage of quantities,
               units and equations", version 4.0, November 2016,
@@ -410,22 +426,6 @@ Author's Address
 
    Phone: +49-421-218-63921
    Email: cabo@tzi.org
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
