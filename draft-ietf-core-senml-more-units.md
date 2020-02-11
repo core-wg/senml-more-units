@@ -18,7 +18,7 @@ pi:
   subcompact: 'no'
 title: Additional Units for SenML
 abbrev: Additional Units for SenML
-date: 2019-11-04
+date: 2019-11-11
 author:
 -
   ins: C. Bormann
@@ -60,6 +60,7 @@ normative:
       IEEE Std: 1459-2010
     date: 2010-03-19
 informative:
+  I-D.bormann-core-senml-versions: versions
   RS:
     title: "Standard-compliant usage of quantities, units and equations"
     author:
@@ -258,11 +259,19 @@ and {{BIPM}}.
 <!-- normalization step; but normalization is not that hard either -->
 As of SenML version 10 {{RFC8428}}, SenML packs are limited to
 using primary units in "u" fields.
-The use of secondary units in "u" fields MAY be enabled by indicating a new SenML
+The use of primary units enables direct comparison of measurements
+from different sources.  Also, it facilitates implementations that
+trigger on the presence of a quantity in a certain unit, without the
+need to track any additional secondary units that may be registered
+for this quantity.
+
+Where the benefits of directly using a secondary unit in a SenML pack
+outweigh the obove considerations,
+the use of secondary units in "u" fields MAY be enabled by indicating a new SenML
 version that specifically allows this and/or by using a field with a label name that ends with the "_"
 character ("must-understand" field) that specifically allows this.
 The definition of these versions and fields is outside the scope of
-the present specification.
+the present specification; one such definition is provided in {{-versions}}.
 
 # Operational Considerations
 
