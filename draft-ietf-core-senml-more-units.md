@@ -18,7 +18,7 @@ pi:
   subcompact: 'no'
 title: Additional Units for SenML
 abbrev: Additional Units for SenML
-date: 2019-11-11
+date: 2020-02-11
 author:
 -
   ins: C. Bormann
