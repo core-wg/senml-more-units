@@ -301,7 +301,7 @@ ul.toc li {
 
   <meta name="dct.creator" content="Bormann, C." />
   <meta name="dct.identifier" content="urn:ietf:id:draft-ietf-core-senml-more-units-latest" />
-  <meta name="dct.issued" scheme="ISO8601" content="2019-11-04" />
+  <meta name="dct.issued" scheme="ISO8601" content="2020-02-13" />
   <meta name="dct.abstract" content="The Sensor Measurement Lists (SenML) media type supports the indication of units for a quantity represented.  This short document registers a number of additional unit names in the IANA registry for Units in SenML.  It also defines a registry for secondary units that cannot be in SenML&#8217;s main registry as they are derived by linear transformation from units already in that registry. " />
   <meta name="description" content="The Sensor Measurement Lists (SenML) media type supports the indication of units for a quantity represented.  This short document registers a number of additional unit names in the IANA registry for Units in SenML.  It also defines a registry for secondary units that cannot be in SenML&#8217;s main registry as they are derived by linear transformation from units already in that registry. " />
 
@@ -322,10 +322,10 @@ ul.toc li {
 </tr>
 <tr>
 <td class="left">Intended status: Standards Track</td>
-<td class="right">November 04, 2019</td>
+<td class="right">February 13, 2020</td>
 </tr>
 <tr>
-<td class="left">Expires: May 7, 2020</td>
+<td class="left">Expires: August 16, 2020</td>
 <td class="right"></td>
 </tr>
 
@@ -342,9 +342,9 @@ ul.toc li {
 <p>This Internet-Draft is submitted in full conformance with the provisions of BCP 78 and BCP 79.</p>
 <p>Internet-Drafts are working documents of the Internet Engineering Task Force (IETF).  Note that other groups may also distribute working documents as Internet-Drafts.  The list of current Internet-Drafts is at https://datatracker.ietf.org/drafts/current/.</p>
 <p>Internet-Drafts are draft documents valid for a maximum of six months and may be updated, replaced, or obsoleted by other documents at any time.  It is inappropriate to use Internet-Drafts as reference material or to cite them other than as "work in progress."</p>
-<p>This Internet-Draft will expire on May 7, 2020.</p>
+<p>This Internet-Draft will expire on August 16, 2020.</p>
 <h1 id="rfc.copyrightnotice"><a href="#rfc.copyrightnotice">Copyright Notice</a></h1>
-<p>Copyright (c) 2019 IETF Trust and the persons identified as the document authors.  All rights reserved.</p>
+<p>Copyright (c) 2020 IETF Trust and the persons identified as the document authors.  All rights reserved.</p>
 <p>This document is subject to BCP 78 and the IETF Trust's Legal Provisions Relating to IETF Documents (https://trustee.ietf.org/license-info) in effect on the date of publication of this document.  Please review these documents carefully, as they describe your rights and restrictions with respect to this document.  Code Components extracted from this document must include Simplified BSD License text as described in Section 4.e of the Trust Legal Provisions and are provided without warranty as described in the Simplified BSD License.</p>
 
   
@@ -748,7 +748,8 @@ ul.toc li {
 <p id="rfc.section.4.p.6">Note 1: This registration does not use the obvious name &#8220;%&#8221; because this name has been taken in <a href="#RFC8428" class="xref">[RFC8428]</a> already, where it is a NOT RECOMMENDED synonym for &#8220;/&#8221; (unity) for legacy reasons.  Note that the presence of both &#8220;%&#8221; and &#8220;/100&#8221; with different meanings is likely to create confusion, so the present document adds some weight to the recommendation against using the counterintuitive unit name &#8220;%&#8221;.</p>
 <p id="rfc.section.4.p.7">Example: the value of a quantity given as 100 ms is first multiplied by 1/1000, yielding the number 0.1, and then the offset 0 is added, yielding the number 0.1 again, leading to a quantity of 0.1 s.  The value of a quantity given as 10 dBm is first multiplied by 1, yielding the number 10, and then the offset -30 is added, yielding the number -20, leading to a quantity of -20 dBW.</p>
 <p id="rfc.section.4.p.8">New entries can be added to the registration by Expert Review as defined in <a href="#RFC8126" class="xref">[RFC8126]</a>.  Experts should exercise their own good judgment, with the same guidelines as used for SenML units (Section 12.1 of <a href="#RFC8428" class="xref">[RFC8428]</a>), but without applying the rules 4, 5, and 8.  Note that rule 7 limits the use of what could be understood as prefixes on their own, not the use of prefixes inside secondary unit names.  Guidelines to the difference between units (which can go into the registry) and quantities are widely available, see for instance <a href="#RS" class="xref">[RS]</a> and <a href="#BIPM" class="xref">[BIPM]</a>.</p>
-<p id="rfc.section.4.p.9">As of SenML version 10 <a href="#RFC8428" class="xref">[RFC8428]</a>, SenML packs are limited to using primary units in &#8220;u&#8221; fields.  The use of secondary units in &#8220;u&#8221; fields MAY be enabled by indicating a new SenML version that specifically allows this and/or by using a field with a label name that ends with the &#8220;_&#8221; character (&#8220;must-understand&#8221; field) that specifically allows this.  The definition of these versions and fields is outside the scope of the present specification.</p>
+<p id="rfc.section.4.p.9">As of SenML version 10 <a href="#RFC8428" class="xref">[RFC8428]</a>, SenML packs are limited to using primary units in &#8220;u&#8221; fields.  The use of primary units enables direct comparison of measurements from different sources.  Also, it facilitates implementations that trigger on the presence of a quantity in a certain unit, without the need to track any additional secondary units that may be registered for this quantity.</p>
+<p id="rfc.section.4.p.10">Where the benefits of directly using a secondary unit in a SenML pack outweigh the above considerations, the use of secondary units in &#8220;u&#8221; fields MAY be enabled by indicating a new SenML version that specifically allows this and/or by using a field with a label name that ends with the &#8220;_&#8221; character (&#8220;must-understand&#8221; field) that specifically allows this.  The definition of these versions and fields is outside the scope of the present specification; one such definition is provided in <a href="#I-D.bormann-core-senml-versions" class="xref">[I-D.bormann-core-senml-versions]</a>.</p>
 <h1 id="rfc.section.5">
 <a href="#rfc.section.5">5.</a> <a href="#operational-considerations" id="operational-considerations">Operational Considerations</a>
 </h1>
@@ -814,6 +815,11 @@ ul.toc li {
 <td class="reference"><b id="BIPM">[BIPM]</b></td>
 <td class="top">
 <a>Bureau International des Poids es Mesures</a>, "<a href="https://www.bipm.org/utils/common/pdf/si-brochure/SI-Brochure-9-EN.pdf">The International System of Units (SI), 9th edition</a>", 2019.</td>
+</tr>
+<tr>
+<td class="reference"><b id="I-D.bormann-core-senml-versions">[I-D.bormann-core-senml-versions]</b></td>
+<td class="top">
+<a>Bormann, C.</a>, "<a href="https://tools.ietf.org/html/draft-bormann-core-senml-versions-00">SenML: Features and Versions</a>", Internet-Draft draft-bormann-core-senml-versions-00, February 2020.</td>
 </tr>
 <tr>
 <td class="reference"><b id="RS">[RS]</b></td>

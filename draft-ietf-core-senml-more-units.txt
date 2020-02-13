@@ -4,8 +4,8 @@
 
 Network Working Group                                         C. Bormann
 Internet-Draft                                   Universitaet Bremen TZI
-Intended status: Standards Track                       November 04, 2019
-Expires: May 7, 2020
+Intended status: Standards Track                       February 13, 2020
+Expires: August 16, 2020
 
 
                        Additional Units for SenML
@@ -35,11 +35,11 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on May 7, 2020.
+   This Internet-Draft will expire on August 16, 2020.
 
 Copyright Notice
 
-   Copyright (c) 2019 IETF Trust and the persons identified as the
+   Copyright (c) 2020 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -53,9 +53,9 @@ Copyright Notice
 
 
 
-Bormann                    Expires May 7, 2020                  [Page 1]
+Bormann                  Expires August 16, 2020                [Page 1]
 
-Internet-Draft         Additional Units for SenML          November 2019
+Internet-Draft         Additional Units for SenML          February 2020
 
 
    the Trust Legal Provisions and are provided without warranty as
@@ -109,9 +109,9 @@ Table of Contents
 
 
 
-Bormann                    Expires May 7, 2020                  [Page 2]
+Bormann                  Expires August 16, 2020                [Page 2]
 
-Internet-Draft         Additional Units for SenML          November 2019
+Internet-Draft         Additional Units for SenML          February 2020
 
 
    +--------+--------------------------------------+-------+-----------+
@@ -165,9 +165,9 @@ Internet-Draft         Additional Units for SenML          November 2019
 
 
 
-Bormann                    Expires May 7, 2020                  [Page 3]
+Bormann                  Expires August 16, 2020                [Page 3]
 
-Internet-Draft         Additional Units for SenML          November 2019
+Internet-Draft         Additional Units for SenML          February 2020
 
 
       primary unit VA).  It is not presently known to this author how
@@ -221,9 +221,9 @@ Internet-Draft         Additional Units for SenML          November 2019
 
 
 
-Bormann                    Expires May 7, 2020                  [Page 4]
+Bormann                  Expires August 16, 2020                [Page 4]
 
-Internet-Draft         Additional Units for SenML          November 2019
+Internet-Draft         Additional Units for SenML          February 2020
 
 
    +-----------+-------------------+-------+-----------+-----+---------+
@@ -277,9 +277,9 @@ Internet-Draft         Additional Units for SenML          November 2019
 
 
 
-Bormann                    Expires May 7, 2020                  [Page 5]
+Bormann                  Expires August 16, 2020                [Page 5]
 
-Internet-Draft         Additional Units for SenML          November 2019
+Internet-Draft         Additional Units for SenML          February 2020
 
 
    Note 1: This registration does not use the obvious name "%" because
@@ -307,12 +307,20 @@ Internet-Draft         Additional Units for SenML          November 2019
    [RS] and [BIPM].
 
    As of SenML version 10 [RFC8428], SenML packs are limited to using
-   primary units in "u" fields.  The use of secondary units in "u"
+   primary units in "u" fields.  The use of primary units enables direct
+   comparison of measurements from different sources.  Also, it
+   facilitates implementations that trigger on the presence of a
+   quantity in a certain unit, without the need to track any additional
+   secondary units that may be registered for this quantity.
+
+   Where the benefits of directly using a secondary unit in a SenML pack
+   outweigh the above considerations, the use of secondary units in "u"
    fields MAY be enabled by indicating a new SenML version that
    specifically allows this and/or by using a field with a label name
    that ends with the "_" character ("must-understand" field) that
    specifically allows this.  The definition of these versions and
-   fields is outside the scope of the present specification.
+   fields is outside the scope of the present specification; one such
+   definition is provided in [I-D.bormann-core-senml-versions].
 
 5.  Operational Considerations
 
@@ -322,6 +330,14 @@ Internet-Draft         Additional Units for SenML          November 2019
 
    Implementers may be tempted to equip each instance of their systems
    with code to download new versions of the registry from IANA
+
+
+
+Bormann                  Expires August 16, 2020                [Page 6]
+
+Internet-Draft         Additional Units for SenML          February 2020
+
+
    frequently, in order to be able to make use of newly defined
    secondary unit names.  This can create high load at IANA and a
    potential single point of failure.  Instead of pulling the registry
@@ -329,14 +345,6 @@ Internet-Draft         Additional Units for SenML          November 2019
    mechanism (or a similar, less frequently triggered mechanism) SHOULD
    be used to disseminate updated units registries obtained from IANA
    towards the instances via common repositories.
-
-
-
-
-Bormann                    Expires May 7, 2020                  [Page 6]
-
-Internet-Draft         Additional Units for SenML          November 2019
-
 
 6.  Security Considerations
 
@@ -377,6 +385,15 @@ Acknowledgements
               Balanced, or Unbalanced Conditions", IEEE Std 1459-2010,
               March 2010.
 
+
+
+
+
+Bormann                  Expires August 16, 2020                [Page 7]
+
+Internet-Draft         Additional Units for SenML          February 2020
+
+
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
               DOI 10.17487/RFC2119, March 1997,
@@ -386,13 +403,6 @@ Acknowledgements
               Writing an IANA Considerations Section in RFCs", BCP 26,
               RFC 8126, DOI 10.17487/RFC8126, June 2017,
               <https://www.rfc-editor.org/info/rfc8126>.
-
-
-
-Bormann                    Expires May 7, 2020                  [Page 7]
-
-Internet-Draft         Additional Units for SenML          November 2019
-
 
    [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
@@ -409,6 +419,11 @@ Internet-Draft         Additional Units for SenML          November 2019
               International System of Units (SI), 9th edition", 2019,
               <https://www.bipm.org/utils/common/pdf/si-brochure/SI-
               Brochure-9-EN.pdf>.
+
+   [I-D.bormann-core-senml-versions]
+              Bormann, C., "SenML: Features and Versions", draft-
+              bormann-core-senml-versions-00 (work in progress),
+              February 2020.
 
    [RS]       Rohde&Schwarz, "Standard-compliant usage of quantities,
               units and equations", version 4.0, November 2016,
@@ -430,19 +445,4 @@ Author's Address
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Bormann                    Expires May 7, 2020                  [Page 8]
+Bormann                  Expires August 16, 2020                [Page 8]
