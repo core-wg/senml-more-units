@@ -18,7 +18,7 @@ pi:
   subcompact: 'no'
 title: Additional Units for SenML
 abbrev: Additional Units for SenML
-date: 2020-02-11
+date: 2020-02-13
 author:
 -
   ins: C. Bormann
@@ -266,7 +266,7 @@ need to track any additional secondary units that may be registered
 for this quantity.
 
 Where the benefits of directly using a secondary unit in a SenML pack
-outweigh the obove considerations,
+outweigh the above considerations,
 the use of secondary units in "u" fields MAY be enabled by indicating a new SenML
 version that specifically allows this and/or by using a field with a label name that ends with the "_"
 character ("must-understand" field) that specifically allows this.
@@ -308,3 +308,8 @@ Comments provided by him as well as by Thomas Fossati, Joaquin Prado,
 and Jaime Jimenez helped improve the document.
 
 --- back
+
+<!--  LocalWords:  SenML's SDOs subregistry RFCthis unscaled
+ -->
+<!--  LocalWords:  namespace counterintuitive Implementers
+ -->
