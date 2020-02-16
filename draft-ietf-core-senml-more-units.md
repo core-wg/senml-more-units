@@ -300,14 +300,14 @@ confusion about the proper unit to use.
 
 See {{new-units}} and {{new-registry}}.
 
+--- back
+
 # Acknowledgements {#acks}
 {: numbered="no"}
 
 Ari Keranen pointed out the need for additional units in SenML.
 Comments provided by him as well as by Thomas Fossati, Joaquin Prado,
 and Jaime Jimenez helped improve the document.
-
---- back
 
 <!--  LocalWords:  SenML's SDOs subregistry RFCthis unscaled
  -->
