@@ -109,6 +109,9 @@ Organizations (SDOs).
 The document also defines a registry for secondary Unit names that
 cannot be in SenML's main registry as they are derived by linear
 transformation from units already in that registry.
+Although SenML version 10 {{-senml}} does not provide for the direct use
+of these secondary units, they are planned to be supported via the use
+of SenML extension mechanisms, one of which is proposed in {{-versions}}.
 
 {::boilerplate bcp14}
 
