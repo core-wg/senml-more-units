@@ -320,7 +320,7 @@ Internet-Draft         Additional Units for SenML          February 2020
    that ends with the "_" character ("must-understand" field) whose
    definition specifically allows this.  The definition of these
    versions and fields is outside the scope of the present
-   specification; one such definition is provided in
+   specification; one such definition is proposed in
    [I-D.bormann-core-senml-versions].
 
 5.  Operational Considerations
