@@ -284,8 +284,8 @@ with code to download new versions of the registry from IANA
 frequently, in order to be able to make use of newly defined secondary
 unit names.  This can create high load at IANA and a potential single
 point of failure.  Instead of pulling the registry in each individual
-instance of the code, the software update mechanism (or a similar,
-less frequently triggered mechanism) SHOULD be used to disseminate
+instance of the code, the software update mechanism (or a similar
+mechanism visiting IANA less frequently) SHOULD be used to disseminate
 updated units registries obtained from IANA towards the instances via
 common repositories.
 
