@@ -159,10 +159,9 @@ a small number of alternative units in wide use:
 * The Volt-Ampere-reactive.  {{IEC-80000-6}} item 6-60.b defines the
   var (volt ampere reactive) as an alternative (and fully equivalent)
   unit to VA specifically for reactive power (with the primary unit
-  VA).  It is not presently known to this author how the upcoming
-  revision of IEC 80000-6 will update this, but it has became clear
+  VA); it has became clear
   that there is strong interest in using this unit
-  specifically for the imaginary content of complex power, reactive
+  specifically for the imaginary content of complex power, i.e., reactive
   power {{IEEE-1459}}.
 
 The unit "degrees" is in wide use in practice for plane angles (as
