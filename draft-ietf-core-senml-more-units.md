@@ -115,7 +115,7 @@ of SenML extension mechanisms, one of which is proposed in {{-versions}}.
 
 {::boilerplate bcp14}
 
-# New Units
+# New Primary Units {#new-units}
 
 IANA is requested to assign new units in the "SenML Units"
 subregistry of the SenML registry {{IANA.senml}} (as defined in {{RFC8428}}):
@@ -132,7 +132,7 @@ subregistry of the SenML registry {{IANA.senml}} (as defined in {{RFC8428}}):
 | deg    | degree (angle)*                                             | float | RFCthis   |
 {: #new-unit-tbl title="New units registered for SenML"}
 
-# Rationale
+## Rationale
 
 SenML {{-senml}} takes the position that unscaled SI units should
 always be used.  However, SenML makes one exception: The degree
@@ -175,7 +175,7 @@ energy expended for achieving motion over a given distance, e.g., as an
 equivalent for electrical cars of the inverse of "mileage".
 
 
-# New Registry
+# New Registry for Secondary Units {#new-registry}
 
 IANA is requested to create a "secondary units"
 subregistry in the SenML registry {{IANA.senml}} defined in
@@ -322,7 +322,7 @@ See {{new-units}} and {{new-registry}}.
 
 Ari Keranen pointed out the need for additional units in SenML.
 Comments provided by him as well as by Thomas Fossati, Joaquin Prado,
-Jaime Jimenez, and Benjamin Kaduk helped improve the document.
+Jaime Jimenez, Benjamin Kaduk, and Rob Wilton helped improve the document.
 
 <!--  LocalWords:  SenML's SDOs subregistry RFCthis unscaled
  -->
