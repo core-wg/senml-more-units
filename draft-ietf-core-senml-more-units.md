@@ -225,7 +225,7 @@ The initial content of the secondary units registry is provided in {{secondary-u
 | hPa            | hectopascal                | Pa         |       100 |       0 | RFCthis     |
 | mm             | millimeter                 | m          |    1/1000 |       0 | RFCthis     |
 | cm             | centimeter                 | m          |     1/100 |       0 | RFCthis     |
-| km             | kilometer                  | km         |      1000 |       0 | RFCthis     |
+| km             | kilometer                  | m          |      1000 |       0 | RFCthis     |
 | km/h           | kilometer per hour         | m/s        |     1/3.6 |       0 | RFCthis     |
 {: #secondary-unit-tbl title="Secondary units registered for SenML"
 cols="9l l 6l 9r r l"}
