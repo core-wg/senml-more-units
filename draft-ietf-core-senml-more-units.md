@@ -143,7 +143,8 @@ a small number of alternative units in wide use:
 
 * The Byte.  {{IEC-80000-13}} defines both the bit (item 13-9.b) and
   the byte (item 13-9.c, also
-  called octet) as alternative names for the coherent unit one for the
+  called octet) as alternative names for the coherent unit used for
+  dimensionless quantities, for the
   purpose of giving storage capacity and related quantities.  While
   the name octet is associated with the symbol o, this is in wide use
   only in French-speaking countries.  Globally more wide-spread is the
@@ -188,7 +189,8 @@ The registry has six columns:
 * SenML unit: an existing SenML unit from the SenML units registry
 * scale, offset: two rational numbers, expressed in decimal
   (optionally, with a decimal exponent given) or as a
-  fraction divided by a "/" character.
+  fraction represented using a "/" character to separate numerator and
+  denominator.
 * Reference: where does the entry come from.
 
 Quantities expressed in the secondary unit can be converted into the
@@ -287,7 +289,7 @@ frequently, in order to be able to make use of newly defined secondary
 unit names.  This can create high load at IANA and a potential single
 point of failure.  Instead of pulling the registry in each individual
 instance of the code, the software update mechanism (or a similar
-mechanism visiting IANA less frequently) SHOULD be used to disseminate
+mechanism that leads to less frequent IANA visits) SHOULD be used to disseminate
 updated units registries obtained from IANA towards the instances via
 common repositories.
 
