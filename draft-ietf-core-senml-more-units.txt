@@ -127,7 +127,7 @@ Internet-Draft         Additional Units for SenML          February 2020
    | J/m    | joule per meter (Energy per          | float | RFCthis   |
    |        | distance)                            |       |           |
    | kg/m3  | kilogram per cubic meter (mass       | float | RFCthis   |
-   |        | concentration)                       |       |           |
+   |        | density, mass concentration)         |       |           |
    | deg    | degree (angle)*                      | float | RFCthis   |
    +--------+--------------------------------------+-------+-----------+
 
@@ -303,8 +303,8 @@ Internet-Draft         Additional Units for SenML          February 2020
    8.  Note that rule 7 limits the use of what could be understood as
    prefixes on their own, not the use of prefixes inside secondary unit
    names.  Guidelines to the difference between units (which can go into
-   the registry) and quantities are widely available, see for instance
-   [RS] and [BIPM].
+   the registry) and quantities (which cannot) are widely available, see
+   for instance [RS] and [BIPM].
 
    As of SenML version 10 [RFC8428], SenML packs are limited to using
    primary units in "u" fields.  The use of primary units enables direct
