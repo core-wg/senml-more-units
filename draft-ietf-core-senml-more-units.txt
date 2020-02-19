@@ -64,15 +64,15 @@ Internet-Draft         Additional Units for SenML          February 2020
 Table of Contents
 
    1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   2
-   2.  New Units . . . . . . . . . . . . . . . . . . . . . . . . . .   3
-   3.  Rationale . . . . . . . . . . . . . . . . . . . . . . . . . .   3
-   4.  New Registry  . . . . . . . . . . . . . . . . . . . . . . . .   4
-   5.  Operational Considerations  . . . . . . . . . . . . . . . . .   6
-   6.  Security Considerations . . . . . . . . . . . . . . . . . . .   7
-   7.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   7
-   8.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   7
-     8.1.  Normative References  . . . . . . . . . . . . . . . . . .   7
-     8.2.  Informative References  . . . . . . . . . . . . . . . . .   8
+   2.  New Primary Units . . . . . . . . . . . . . . . . . . . . . .   3
+     2.1.  Rationale . . . . . . . . . . . . . . . . . . . . . . . .   3
+   3.  New Registry for Secondary Units  . . . . . . . . . . . . . .   4
+   4.  Operational Considerations  . . . . . . . . . . . . . . . . .   6
+   5.  Security Considerations . . . . . . . . . . . . . . . . . . .   7
+   6.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   7
+   7.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   7
+     7.1.  Normative References  . . . . . . . . . . . . . . . . . .   7
+     7.2.  Informative References  . . . . . . . . . . . . . . . . .   8
    Acknowledgements  . . . . . . . . . . . . . . . . . . . . . . . .   8
    Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   9
 
@@ -114,7 +114,7 @@ Bormann                  Expires August 16, 2020                [Page 2]
 Internet-Draft         Additional Units for SenML          February 2020
 
 
-2.  New Units
+2.  New Primary Units
 
    IANA is requested to assign new units in the "SenML Units"
    subregistry of the SenML registry [IANA.senml] (as defined in
@@ -139,7 +139,7 @@ Internet-Draft         Additional Units for SenML          February 2020
 
                   Table 1: New units registered for SenML
 
-3.  Rationale
+2.1.  Rationale
 
    SenML [RFC8428] takes the position that unscaled SI units should
    always be used.  However, SenML makes one exception: The degree
@@ -191,7 +191,7 @@ Internet-Draft         Additional Units for SenML          February 2020
    the energy expended for achieving motion over a given distance, e.g.,
    as an equivalent for electrical cars of the inverse of "mileage".
 
-4.  New Registry
+3.  New Registry for Secondary Units
 
    IANA is requested to create a "secondary units" subregistry in the
    SenML registry [IANA.senml] defined in [RFC8428].
@@ -323,7 +323,7 @@ Internet-Draft         Additional Units for SenML          February 2020
    specification; one such definition is proposed in
    [I-D.bormann-core-senml-versions].
 
-5.  Operational Considerations
+4.  Operational Considerations
 
    The secondary unit registry is expected to grow at a faster pace than
    the registry of primary unit names.  It also is amenable to automatic
@@ -348,7 +348,7 @@ Internet-Draft         Additional Units for SenML          February 2020
    SHOULD be used to disseminate updated units registries obtained from
    IANA towards the instances via common repositories.
 
-6.  Security Considerations
+5.  Security Considerations
 
    The security considerations of [RFC8428] apply.
 
@@ -356,7 +356,7 @@ Internet-Draft         Additional Units for SenML          February 2020
    security considerations except from a possible potential for
    additional confusion about the proper unit to use, and from the risk
    that an implementation based on the assumption described in the
-   penultimate paragraph of Section 4 no longer works properly.
+   penultimate paragraph of Section 3 no longer works properly.
    However, an implementation processing a pack while making use of
    secondary units is guaranteed to have been developed with an
    awareness of the risks of having multiple units available for the
@@ -367,13 +367,13 @@ Internet-Draft         Additional Units for SenML          February 2020
    secondary units by the need for a must-understand field or an updated
    version field.
 
-7.  IANA Considerations
+6.  IANA Considerations
 
-   See Section 2 and Section 4.
+   See Section 2 and Section 3.
 
-8.  References
+7.  References
 
-8.1.  Normative References
+7.1.  Normative References
 
    [IANA.senml]
               IANA, "Sensor Measurement Lists (SenML)",
@@ -419,7 +419,7 @@ Internet-Draft         Additional Units for SenML          February 2020
               DOI 10.17487/RFC8428, August 2018,
               <https://www.rfc-editor.org/info/rfc8428>.
 
-8.2.  Informative References
+7.2.  Informative References
 
    [BIPM]     Bureau International des Poids es Mesures, "The
               International System of Units (SI), 9th edition", 2019,
@@ -441,7 +441,7 @@ Acknowledgements
 
    Ari Keranen pointed out the need for additional units in SenML.
    Comments provided by him as well as by Thomas Fossati, Joaquin Prado,
-   Jaime Jimenez, and Benjamin Kaduk helped improve the document.
+
 
 
 
@@ -449,6 +449,9 @@ Bormann                  Expires August 16, 2020                [Page 8]
 
 Internet-Draft         Additional Units for SenML          February 2020
 
+
+   Jaime Jimenez, Benjamin Kaduk, and Rob Wilton helped improve the
+   document.
 
 Author's Address
 
@@ -460,9 +463,6 @@ Author's Address
 
    Phone: +49-421-218-63921
    Email: cabo@tzi.org
-
-
-
 
 
 

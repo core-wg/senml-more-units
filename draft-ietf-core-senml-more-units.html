@@ -283,15 +283,15 @@ ul.toc li {
 
   <link href="#rfc.toc" rel="Contents">
 <link href="#rfc.section.1" rel="Chapter" title="1 Introduction">
-<link href="#rfc.section.2" rel="Chapter" title="2 New Units">
-<link href="#rfc.section.3" rel="Chapter" title="3 Rationale">
-<link href="#rfc.section.4" rel="Chapter" title="4 New Registry">
-<link href="#rfc.section.5" rel="Chapter" title="5 Operational Considerations">
-<link href="#rfc.section.6" rel="Chapter" title="6 Security Considerations">
-<link href="#rfc.section.7" rel="Chapter" title="7 IANA Considerations">
-<link href="#rfc.references" rel="Chapter" title="8 References">
-<link href="#rfc.references.1" rel="Chapter" title="8.1 Normative References">
-<link href="#rfc.references.2" rel="Chapter" title="8.2 Informative References">
+<link href="#rfc.section.2" rel="Chapter" title="2 New Primary Units">
+<link href="#rfc.section.2.1" rel="Chapter" title="2.1 Rationale">
+<link href="#rfc.section.3" rel="Chapter" title="3 New Registry for Secondary Units">
+<link href="#rfc.section.4" rel="Chapter" title="4 Operational Considerations">
+<link href="#rfc.section.5" rel="Chapter" title="5 Security Considerations">
+<link href="#rfc.section.6" rel="Chapter" title="6 IANA Considerations">
+<link href="#rfc.references" rel="Chapter" title="7 References">
+<link href="#rfc.references.1" rel="Chapter" title="7.1 Normative References">
+<link href="#rfc.references.2" rel="Chapter" title="7.2 Informative References">
 <link href="#rfc.acknowledgements" rel="Chapter">
 <link href="#rfc.authors" rel="Chapter">
 
@@ -354,23 +354,23 @@ ul.toc li {
 
   	<li>1.   <a href="#rfc.section.1">Introduction</a>
 </li>
-<li>2.   <a href="#rfc.section.2">New Units</a>
+<li>2.   <a href="#rfc.section.2">New Primary Units</a>
 </li>
-<li>3.   <a href="#rfc.section.3">Rationale</a>
+<ul><li>2.1.   <a href="#rfc.section.2.1">Rationale</a>
 </li>
-<li>4.   <a href="#rfc.section.4">New Registry</a>
+</ul><li>3.   <a href="#rfc.section.3">New Registry for Secondary Units</a>
 </li>
-<li>5.   <a href="#rfc.section.5">Operational Considerations</a>
+<li>4.   <a href="#rfc.section.4">Operational Considerations</a>
 </li>
-<li>6.   <a href="#rfc.section.6">Security Considerations</a>
+<li>5.   <a href="#rfc.section.5">Security Considerations</a>
 </li>
-<li>7.   <a href="#rfc.section.7">IANA Considerations</a>
+<li>6.   <a href="#rfc.section.6">IANA Considerations</a>
 </li>
-<li>8.   <a href="#rfc.references">References</a>
+<li>7.   <a href="#rfc.references">References</a>
 </li>
-<ul><li>8.1.   <a href="#rfc.references.1">Normative References</a>
+<ul><li>7.1.   <a href="#rfc.references.1">Normative References</a>
 </li>
-<li>8.2.   <a href="#rfc.references.2">Informative References</a>
+<li>7.2.   <a href="#rfc.references.2">Informative References</a>
 </li>
 </ul><li><a href="#rfc.acknowledgements">Acknowledgements</a>
 </li>
@@ -388,7 +388,7 @@ ul.toc li {
 <p id="rfc.section.1.p.3">The document also defines a registry for secondary Unit names that cannot be in SenML&#8217;s main registry as they are derived by linear transformation from units already in that registry.  Although SenML version 10 <a href="#RFC8428" class="xref">[RFC8428]</a> does not provide for the direct use of these secondary units, they are planned to be supported via the use of SenML extension mechanisms, one of which is proposed in <a href="#I-D.bormann-core-senml-versions" class="xref">[I-D.bormann-core-senml-versions]</a>.</p>
 <p id="rfc.section.1.p.4">The key words &#8220;MUST&#8221;, &#8220;MUST NOT&#8221;, &#8220;REQUIRED&#8221;, &#8220;SHALL&#8221;, &#8220;SHALL NOT&#8221;, &#8220;SHOULD&#8221;, &#8220;SHOULD NOT&#8221;, &#8220;RECOMMENDED&#8221;, &#8220;NOT RECOMMENDED&#8221;, &#8220;MAY&#8221;, and &#8220;OPTIONAL&#8221; in this document are to be interpreted as described in BCP&#160;14 <a href="#RFC2119" class="xref">[RFC2119]</a> <a href="#RFC8174" class="xref">[RFC8174]</a> when, and only when, they appear in all capitals, as shown here.</p>
 <h1 id="rfc.section.2">
-<a href="#rfc.section.2">2.</a> <a href="#new-units" id="new-units">New Units</a>
+<a href="#rfc.section.2">2.</a> <a href="#new-units" id="new-units">New Primary Units</a>
 </h1>
 <p id="rfc.section.2.p.1">IANA is requested to assign new units in the &#8220;SenML Units&#8221; subregistry of the SenML registry <a href="#IANA.senml" class="xref">[IANA.senml]</a> (as defined in <a href="#RFC8428" class="xref">[RFC8428]</a>):</p>
 <div id="rfc.table.1"></div>
@@ -452,11 +452,11 @@ ul.toc li {
 </tr>
 </tbody>
 </table>
-<h1 id="rfc.section.3">
-<a href="#rfc.section.3">3.</a> <a href="#rationale" id="rationale">Rationale</a>
+<h1 id="rfc.section.2.1">
+<a href="#rfc.section.2.1">2.1.</a> <a href="#rationale" id="rationale">Rationale</a>
 </h1>
-<p id="rfc.section.3.p.1">SenML <a href="#RFC8428" class="xref">[RFC8428]</a> takes the position that unscaled SI units should always be used.  However, SenML makes one exception: The degree Celsius (as Cel) is allowed as an alternative to the K (Kelvin).</p>
-<p id="rfc.section.3.p.2">This document takes the position that the same should apply to a small number of alternative units in wide use:</p>
+<p id="rfc.section.2.1.p.1">SenML <a href="#RFC8428" class="xref">[RFC8428]</a> takes the position that unscaled SI units should always be used.  However, SenML makes one exception: The degree Celsius (as Cel) is allowed as an alternative to the K (Kelvin).</p>
+<p id="rfc.section.2.1.p.2">This document takes the position that the same should apply to a small number of alternative units in wide use:</p>
 <p></p>
 
 <ul>
@@ -464,13 +464,13 @@ ul.toc li {
 <li>The Volt-Ampere. <a href="#IEC-80000-6" class="xref">[IEC-80000-6]</a>} item 6-57.a defines the VA (volt ampere) as a unit for apparent power; items 6-59.a, 6-60.a and 6-61.a also use the unit for complex, reactive, and non-active power.</li>
 <li>The Volt-Ampere-reactive.  <a href="#IEC-80000-6" class="xref">[IEC-80000-6]</a> item 6-60.b defines the var (volt ampere reactive) as an alternative (and fully equivalent) unit to VA specifically for reactive power (with the primary unit VA).  It is not presently known to this author how the upcoming revision of IEC 80000-6 will update this, but it has became clear that there is strong interest in using this unit specifically for the imaginary content of complex power, reactive power <a href="#IEEE-1459" class="xref">[IEEE-1459]</a>.</li>
 </ul>
-<p id="rfc.section.3.p.4">The unit &#8220;degrees&#8221; is in wide use in practice for plane angles (as in heading, bearing, etc.).  It is marked with an asterisk because the preferred coherent SI unit is radian (&#8220;rad&#8221;).</p>
-<p id="rfc.section.3.p.5">The Joule per meter is not a traditional electromagnetic unit.  It and its scaled derivatives (in particular Wh/km) are used to describe the energy expended for achieving motion over a given distance, e.g., as an equivalent for electrical cars of the inverse of &#8220;mileage&#8221;.</p>
-<h1 id="rfc.section.4">
-<a href="#rfc.section.4">4.</a> <a href="#new-registry" id="new-registry">New Registry</a>
+<p id="rfc.section.2.1.p.4">The unit &#8220;degrees&#8221; is in wide use in practice for plane angles (as in heading, bearing, etc.).  It is marked with an asterisk because the preferred coherent SI unit is radian (&#8220;rad&#8221;).</p>
+<p id="rfc.section.2.1.p.5">The Joule per meter is not a traditional electromagnetic unit.  It and its scaled derivatives (in particular Wh/km) are used to describe the energy expended for achieving motion over a given distance, e.g., as an equivalent for electrical cars of the inverse of &#8220;mileage&#8221;.</p>
+<h1 id="rfc.section.3">
+<a href="#rfc.section.3">3.</a> <a href="#new-registry" id="new-registry">New Registry for Secondary Units</a>
 </h1>
-<p id="rfc.section.4.p.1">IANA is requested to create a &#8220;secondary units&#8221; subregistry in the SenML registry <a href="#IANA.senml" class="xref">[IANA.senml]</a> defined in <a href="#RFC8428" class="xref">[RFC8428]</a>.</p>
-<p id="rfc.section.4.p.2">The registry has six columns:</p>
+<p id="rfc.section.3.p.1">IANA is requested to create a &#8220;secondary units&#8221; subregistry in the SenML registry <a href="#IANA.senml" class="xref">[IANA.senml]</a> defined in <a href="#RFC8428" class="xref">[RFC8428]</a>.</p>
+<p id="rfc.section.3.p.2">The registry has six columns:</p>
 <p></p>
 
 <ul>
@@ -480,8 +480,8 @@ ul.toc li {
 <li>scale, offset: two rational numbers, expressed in decimal (optionally, with a decimal exponent given) or as a fraction divided by a &#8220;/&#8221; character.</li>
 <li>Reference: where does the entry come from.</li>
 </ul>
-<p id="rfc.section.4.p.4">Quantities expressed in the secondary unit can be converted into the SenML unit by first multiplying their value with the scale number and then adding the offset, yielding the value in the given SenML unit.</p>
-<p id="rfc.section.4.p.5">The initial content of the secondary units registry is provided in <a href="#secondary-unit-tbl" class="xref">Table 2</a>:</p>
+<p id="rfc.section.3.p.4">Quantities expressed in the secondary unit can be converted into the SenML unit by first multiplying their value with the scale number and then adding the offset, yielding the value in the given SenML unit.</p>
+<p id="rfc.section.3.p.5">The initial content of the secondary units registry is provided in <a href="#secondary-unit-tbl" class="xref">Table 2</a>:</p>
 <div id="rfc.table.2"></div>
 <div id="secondary-unit-tbl"></div>
 <table cellpadding="3" cellspacing="0" class="tt full center">
@@ -745,29 +745,29 @@ ul.toc li {
 </tr>
 </tbody>
 </table>
-<p id="rfc.section.4.p.6">Note 1: This registration does not use the obvious name &#8220;%&#8221; because this name has been taken in <a href="#RFC8428" class="xref">[RFC8428]</a> already, where it is a NOT RECOMMENDED synonym for &#8220;/&#8221; (unity) for legacy reasons.  Note that the presence of both &#8220;%&#8221; and &#8220;/100&#8221; with different meanings is likely to create confusion, so the present document adds some weight to the recommendation against using the counterintuitive unit name &#8220;%&#8221;.</p>
-<p id="rfc.section.4.p.7">Example: the value of a quantity given as 100 ms is first multiplied by 1/1000, yielding the number 0.1, and then the offset 0 is added, yielding the number 0.1 again, leading to a quantity of 0.1 s.  The value of a quantity given as 10 dBm is first multiplied by 1, yielding the number 10, and then the offset -30 is added, yielding the number -20, leading to a quantity of -20 dBW.</p>
-<p id="rfc.section.4.p.8">New entries can be added to the registration by Expert Review as defined in <a href="#RFC8126" class="xref">[RFC8126]</a>.  Experts should exercise their own good judgment, with the same guidelines as used for SenML units (Section 12.1 of <a href="#RFC8428" class="xref">[RFC8428]</a>), but without applying the rules 4, 5, and 8.  Note that rule 7 limits the use of what could be understood as prefixes on their own, not the use of prefixes inside secondary unit names.  Guidelines to the difference between units (which can go into the registry) and quantities (which cannot) are widely available, see for instance <a href="#RS" class="xref">[RS]</a> and <a href="#BIPM" class="xref">[BIPM]</a>.</p>
-<p id="rfc.section.4.p.9">As of SenML version 10 <a href="#RFC8428" class="xref">[RFC8428]</a>, SenML packs are limited to using primary units in &#8220;u&#8221; fields.  The use of primary units enables direct comparison of measurements from different sources.  Also, it facilitates implementations that trigger on the presence of a quantity in a certain unit, without the need to track any additional secondary units that may be registered for this quantity.</p>
-<p id="rfc.section.4.p.10">Where the benefits of directly using a secondary unit in a SenML pack outweigh the above considerations, the use of secondary units in &#8220;u&#8221; fields MAY be enabled by indicating a new SenML version that specifically allows this and/or by using a field with a label name that ends with the &#8220;_&#8221; character (&#8220;must-understand&#8221; field) whose definition specifically allows this.  The definition of these versions and fields is outside the scope of the present specification; one such definition is proposed in <a href="#I-D.bormann-core-senml-versions" class="xref">[I-D.bormann-core-senml-versions]</a>.</p>
+<p id="rfc.section.3.p.6">Note 1: This registration does not use the obvious name &#8220;%&#8221; because this name has been taken in <a href="#RFC8428" class="xref">[RFC8428]</a> already, where it is a NOT RECOMMENDED synonym for &#8220;/&#8221; (unity) for legacy reasons.  Note that the presence of both &#8220;%&#8221; and &#8220;/100&#8221; with different meanings is likely to create confusion, so the present document adds some weight to the recommendation against using the counterintuitive unit name &#8220;%&#8221;.</p>
+<p id="rfc.section.3.p.7">Example: the value of a quantity given as 100 ms is first multiplied by 1/1000, yielding the number 0.1, and then the offset 0 is added, yielding the number 0.1 again, leading to a quantity of 0.1 s.  The value of a quantity given as 10 dBm is first multiplied by 1, yielding the number 10, and then the offset -30 is added, yielding the number -20, leading to a quantity of -20 dBW.</p>
+<p id="rfc.section.3.p.8">New entries can be added to the registration by Expert Review as defined in <a href="#RFC8126" class="xref">[RFC8126]</a>.  Experts should exercise their own good judgment, with the same guidelines as used for SenML units (Section 12.1 of <a href="#RFC8428" class="xref">[RFC8428]</a>), but without applying the rules 4, 5, and 8.  Note that rule 7 limits the use of what could be understood as prefixes on their own, not the use of prefixes inside secondary unit names.  Guidelines to the difference between units (which can go into the registry) and quantities (which cannot) are widely available, see for instance <a href="#RS" class="xref">[RS]</a> and <a href="#BIPM" class="xref">[BIPM]</a>.</p>
+<p id="rfc.section.3.p.9">As of SenML version 10 <a href="#RFC8428" class="xref">[RFC8428]</a>, SenML packs are limited to using primary units in &#8220;u&#8221; fields.  The use of primary units enables direct comparison of measurements from different sources.  Also, it facilitates implementations that trigger on the presence of a quantity in a certain unit, without the need to track any additional secondary units that may be registered for this quantity.</p>
+<p id="rfc.section.3.p.10">Where the benefits of directly using a secondary unit in a SenML pack outweigh the above considerations, the use of secondary units in &#8220;u&#8221; fields MAY be enabled by indicating a new SenML version that specifically allows this and/or by using a field with a label name that ends with the &#8220;_&#8221; character (&#8220;must-understand&#8221; field) whose definition specifically allows this.  The definition of these versions and fields is outside the scope of the present specification; one such definition is proposed in <a href="#I-D.bormann-core-senml-versions" class="xref">[I-D.bormann-core-senml-versions]</a>.</p>
+<h1 id="rfc.section.4">
+<a href="#rfc.section.4">4.</a> <a href="#operational-considerations" id="operational-considerations">Operational Considerations</a>
+</h1>
+<p id="rfc.section.4.p.1">The secondary unit registry is expected to grow at a faster pace than the registry of primary unit names.  It also is amenable to automatic interpretation, by making use of the scale and offset columns.</p>
+<p id="rfc.section.4.p.2">Implementers may be tempted to equip each instance of their systems with code to download new versions of the registry from IANA frequently, in order to be able to make use of newly defined secondary unit names.  This can create high load at IANA and a potential single point of failure.  Instead of pulling the registry in each individual instance of the code, the software update mechanism (or a similar mechanism visiting IANA less frequently) SHOULD be used to disseminate updated units registries obtained from IANA towards the instances via common repositories.</p>
 <h1 id="rfc.section.5">
-<a href="#rfc.section.5">5.</a> <a href="#operational-considerations" id="operational-considerations">Operational Considerations</a>
+<a href="#rfc.section.5">5.</a> <a href="#seccons" id="seccons">Security Considerations</a>
 </h1>
-<p id="rfc.section.5.p.1">The secondary unit registry is expected to grow at a faster pace than the registry of primary unit names.  It also is amenable to automatic interpretation, by making use of the scale and offset columns.</p>
-<p id="rfc.section.5.p.2">Implementers may be tempted to equip each instance of their systems with code to download new versions of the registry from IANA frequently, in order to be able to make use of newly defined secondary unit names.  This can create high load at IANA and a potential single point of failure.  Instead of pulling the registry in each individual instance of the code, the software update mechanism (or a similar mechanism visiting IANA less frequently) SHOULD be used to disseminate updated units registries obtained from IANA towards the instances via common repositories.</p>
+<p id="rfc.section.5.p.1">The security considerations of <a href="#RFC8428" class="xref">[RFC8428]</a> apply.</p>
+<p id="rfc.section.5.p.2">The introduction of new measurement units poses no additional security considerations except from a possible potential for additional confusion about the proper unit to use, and from the risk that an implementation based on the assumption described in the penultimate paragraph of <a href="#new-registry" class="xref">Section 3</a> no longer works properly.  However, an implementation processing a pack while making use of secondary units is guaranteed to have been developed with an awareness of the risks of having multiple units available for the same logical type.  In any case, the existing risk of an existing SenML implementation not understanding a unit that was not in the initial registry content provided in <a href="#RFC8428" class="xref">[RFC8428]</a>, is unchanged, and implementations are warned properly about the potential use of secondary units by the need for a must-understand field or an updated version field.</p>
 <h1 id="rfc.section.6">
-<a href="#rfc.section.6">6.</a> <a href="#seccons" id="seccons">Security Considerations</a>
+<a href="#rfc.section.6">6.</a> <a href="#iana" id="iana">IANA Considerations</a>
 </h1>
-<p id="rfc.section.6.p.1">The security considerations of <a href="#RFC8428" class="xref">[RFC8428]</a> apply.</p>
-<p id="rfc.section.6.p.2">The introduction of new measurement units poses no additional security considerations except from a possible potential for additional confusion about the proper unit to use, and from the risk that an implementation based on the assumption described in the penultimate paragraph of <a href="#new-registry" class="xref">Section 4</a> no longer works properly.  However, an implementation processing a pack while making use of secondary units is guaranteed to have been developed with an awareness of the risks of having multiple units available for the same logical type.  In any case, the existing risk of an existing SenML implementation not understanding a unit that was not in the initial registry content provided in <a href="#RFC8428" class="xref">[RFC8428]</a>, is unchanged, and implementations are warned properly about the potential use of secondary units by the need for a must-understand field or an updated version field.</p>
-<h1 id="rfc.section.7">
-<a href="#rfc.section.7">7.</a> <a href="#iana" id="iana">IANA Considerations</a>
-</h1>
-<p id="rfc.section.7.p.1">See <a href="#new-units" class="xref">Section 2</a> and <a href="#new-registry" class="xref">Section 4</a>.</p>
+<p id="rfc.section.6.p.1">See <a href="#new-units" class="xref">Section 2</a> and <a href="#new-registry" class="xref">Section 3</a>.</p>
 <h1 id="rfc.references">
-<a href="#rfc.references">8.</a> References</h1>
+<a href="#rfc.references">7.</a> References</h1>
 <h1 id="rfc.references.1">
-<a href="#rfc.references.1">8.1.</a> Normative References</h1>
+<a href="#rfc.references.1">7.1.</a> Normative References</h1>
 <table><tbody>
 <tr>
 <td class="reference"><b id="IANA.senml">[IANA.senml]</b></td>
@@ -808,7 +808,7 @@ ul.toc li {
 </tr>
 </tbody></table>
 <h1 id="rfc.references.2">
-<a href="#rfc.references.2">8.2.</a> Informative References</h1>
+<a href="#rfc.references.2">7.2.</a> Informative References</h1>
 <table><tbody>
 <tr>
 <td class="reference"><b id="BIPM">[BIPM]</b></td>
@@ -827,7 +827,7 @@ ul.toc li {
 </tr>
 </tbody></table>
 <h1 id="rfc.acknowledgements"><a href="#rfc.acknowledgements">Acknowledgements</a></h1>
-<p id="rfc.section.A.p.1">Ari Keranen pointed out the need for additional units in SenML.  Comments provided by him as well as by Thomas Fossati, Joaquin Prado, Jaime Jimenez, and Benjamin Kaduk helped improve the document.</p>
+<p id="rfc.section.A.p.1">Ari Keranen pointed out the need for additional units in SenML.  Comments provided by him as well as by Thomas Fossati, Joaquin Prado, Jaime Jimenez, Benjamin Kaduk, and Rob Wilton helped improve the document.</p>
 <h1 id="rfc.authors"><a href="#rfc.authors">Author's Address</a></h1>
 <div class="avoidbreak">
   <address class="vcard">
