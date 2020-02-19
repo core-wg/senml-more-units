@@ -754,7 +754,7 @@ ul.toc li {
 <a href="#rfc.section.5">5.</a> <a href="#operational-considerations" id="operational-considerations">Operational Considerations</a>
 </h1>
 <p id="rfc.section.5.p.1">The secondary unit registry is expected to grow at a faster pace than the registry of primary unit names.  It also is amenable to automatic interpretation, by making use of the scale and offset columns.</p>
-<p id="rfc.section.5.p.2">Implementers may be tempted to equip each instance of their systems with code to download new versions of the registry from IANA frequently, in order to be able to make use of newly defined secondary unit names.  This can create high load at IANA and a potential single point of failure.  Instead of pulling the registry in each individual instance of the code, the software update mechanism (or a similar, less frequently triggered mechanism) SHOULD be used to disseminate updated units registries obtained from IANA towards the instances via common repositories.</p>
+<p id="rfc.section.5.p.2">Implementers may be tempted to equip each instance of their systems with code to download new versions of the registry from IANA frequently, in order to be able to make use of newly defined secondary unit names.  This can create high load at IANA and a potential single point of failure.  Instead of pulling the registry in each individual instance of the code, the software update mechanism (or a similar mechanism visiting IANA less frequently) SHOULD be used to disseminate updated units registries obtained from IANA towards the instances via common repositories.</p>
 <h1 id="rfc.section.6">
 <a href="#rfc.section.6">6.</a> <a href="#seccons" id="seccons">Security Considerations</a>
 </h1>
