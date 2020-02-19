@@ -292,9 +292,21 @@ common repositories.
 # Security Considerations {#seccons}
 
 The security considerations of {{-senml}} apply.
+
 The introduction of new measurement units poses no additional security
 considerations except from a possible potential for additional
-confusion about the proper unit to use.
+confusion about the proper unit to use, and from the risk that an
+implementation based on the assumption described in the penultimate
+paragraph of {{new-registry}} no longer works properly.
+However, an implementation processing a pack while making use of
+secondary units is guaranteed to have been developed with an awareness
+of the risks of having multiple units available for the same logical
+type.
+In any case, the existing risk of an existing SenML implementation not
+understanding a unit that was not in the initial registry content
+provided in {{-senml}}, is unchanged, and implementations are warned
+properly about the potential use of secondary units by the need for a
+must-understand field or an updated version field.
 
 # IANA Considerations {#iana}
 
@@ -307,7 +319,7 @@ See {{new-units}} and {{new-registry}}.
 
 Ari Keranen pointed out the need for additional units in SenML.
 Comments provided by him as well as by Thomas Fossati, Joaquin Prado,
-and Jaime Jimenez helped improve the document.
+Jaime Jimenez, and Benjamin Kaduk helped improve the document.
 
 <!--  LocalWords:  SenML's SDOs subregistry RFCthis unscaled
  -->
