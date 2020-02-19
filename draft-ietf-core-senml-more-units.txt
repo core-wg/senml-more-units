@@ -317,10 +317,11 @@ Internet-Draft         Additional Units for SenML          February 2020
    outweigh the above considerations, the use of secondary units in "u"
    fields MAY be enabled by indicating a new SenML version that
    specifically allows this and/or by using a field with a label name
-   that ends with the "_" character ("must-understand" field) that
-   specifically allows this.  The definition of these versions and
-   fields is outside the scope of the present specification; one such
-   definition is provided in [I-D.bormann-core-senml-versions].
+   that ends with the "_" character ("must-understand" field) whose
+   definition specifically allows this.  The definition of these
+   versions and fields is outside the scope of the present
+   specification; one such definition is provided in
+   [I-D.bormann-core-senml-versions].
 
 5.  Operational Considerations
 
@@ -328,8 +329,7 @@ Internet-Draft         Additional Units for SenML          February 2020
    the registry of primary unit names.  It also is amenable to automatic
    interpretation, by making use of the scale and offset columns.
 
-   Implementers may be tempted to equip each instance of their systems
-   with code to download new versions of the registry from IANA
+
 
 
 
@@ -338,6 +338,8 @@ Bormann                  Expires August 16, 2020                [Page 6]
 Internet-Draft         Additional Units for SenML          February 2020
 
 
+   Implementers may be tempted to equip each instance of their systems
+   with code to download new versions of the registry from IANA
    frequently, in order to be able to make use of newly defined
    secondary unit names.  This can create high load at IANA and a
    potential single point of failure.  Instead of pulling the registry
@@ -383,8 +385,6 @@ Internet-Draft         Additional Units for SenML          February 2020
               Requirement Levels", BCP 14, RFC 2119,
               DOI 10.17487/RFC2119, March 1997,
               <https://www.rfc-editor.org/info/rfc2119>.
-
-
 
 
 
