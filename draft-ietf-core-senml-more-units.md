@@ -117,16 +117,16 @@ transformation from units already in that registry.
 IANA is requested to assign new units in the "SenML Units"
 subregistry of the SenML registry {{IANA.senml}} (as defined in {{RFC8428}}):
 
-| Symbol | Description                                    | Type  | Reference |
-|--------+------------------------------------------------+-------+-----------|
-| B      | Byte (information content)                     | float | RFCthis   |
-| VA     | volt-ampere (Apparent Power)                   | float | RFCthis   |
-| VAs    | volt-ampere second (Apparent Energy)           | float | RFCthis   |
-| var    | volt-ampere reactive (Reactive Power)          | float | RFCthis   |
-| vars   | volt-ampere reactive second (Reactive Energy)  | float | RFCthis   |
-| J/m    | joule per meter (Energy per distance)          | float | RFCthis   |
-| kg/m3  | kilogram per cubic meter (mass concentration)  | float | RFCthis   |
-| deg    | degree (angle)*                                | float | RFCthis   |
+| Symbol | Description                                                 | Type  | Reference |
+|--------+-------------------------------------------------------------+-------+-----------|
+| B      | Byte (information content)                                  | float | RFCthis   |
+| VA     | volt-ampere (Apparent Power)                                | float | RFCthis   |
+| VAs    | volt-ampere second (Apparent Energy)                        | float | RFCthis   |
+| var    | volt-ampere reactive (Reactive Power)                       | float | RFCthis   |
+| vars   | volt-ampere reactive second (Reactive Energy)               | float | RFCthis   |
+| J/m    | joule per meter (Energy per distance)                       | float | RFCthis   |
+| kg/m3  | kilogram per cubic meter (mass density, mass concentration) | float | RFCthis   |
+| deg    | degree (angle)*                                             | float | RFCthis   |
 {: #new-unit-tbl title="New units registered for SenML"}
 
 # Rationale
@@ -252,7 +252,7 @@ Note that rule 7 limits the use of what could be understood as
 prefixes on their own, not the use of prefixes inside secondary unit
 names.
 Guidelines to the difference between units (which can go into the
-registry) and quantities are widely available, see for instance {{RS}}
+registry) and quantities (which cannot) are widely available, see for instance {{RS}}
 and {{BIPM}}.
 
 <!-- benefits of using the first one: can compare right away, no -->
