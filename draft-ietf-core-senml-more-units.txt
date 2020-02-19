@@ -176,11 +176,9 @@ Internet-Draft         Additional Units for SenML          February 2020
    o  The Volt-Ampere-reactive.  [IEC-80000-6] item 6-60.b defines the
       var (volt ampere reactive) as an alternative (and fully
       equivalent) unit to VA specifically for reactive power (with the
-      primary unit VA).  It is not presently known to this author how
-      the upcoming revision of IEC 80000-6 will update this, but it has
-      became clear that there is strong interest in using this unit
-      specifically for the imaginary content of complex power, reactive
-      power [IEEE-1459].
+      primary unit VA); it has became clear that there is strong
+      interest in using this unit specifically for the imaginary content
+      of complex power, i.e., reactive power [IEEE-1459].
 
    The unit "degrees" is in wide use in practice for plane angles (as in
    heading, bearing, etc.).  It is marked with an asterisk because the
@@ -218,6 +216,8 @@ Internet-Draft         Additional Units for SenML          February 2020
 
    The initial content of the secondary units registry is provided in
    Table 2:
+
+
 
 
 
