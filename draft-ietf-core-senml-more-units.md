@@ -269,7 +269,7 @@ Where the benefits of directly using a secondary unit in a SenML pack
 outweigh the above considerations,
 the use of secondary units in "u" fields MAY be enabled by indicating a new SenML
 version that specifically allows this and/or by using a field with a label name that ends with the "_"
-character ("must-understand" field) that specifically allows this.
+character ("must-understand" field) whose definition specifically allows this.
 The definition of these versions and fields is outside the scope of
 the present specification; one such definition is provided in {{-versions}}.
 
