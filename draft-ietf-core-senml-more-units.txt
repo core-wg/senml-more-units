@@ -74,7 +74,7 @@ Table of Contents
      8.1.  Normative References  . . . . . . . . . . . . . . . . . .   7
      8.2.  Informative References  . . . . . . . . . . . . . . . . .   8
    Acknowledgements  . . . . . . . . . . . . . . . . . . . . . . . .   8
-   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   8
+   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   9
 
 1.  Introduction
 
@@ -350,10 +350,22 @@ Internet-Draft         Additional Units for SenML          February 2020
 
 6.  Security Considerations
 
-   The security considerations of [RFC8428] apply.  The introduction of
-   new measurement units poses no additional security considerations
-   except from a possible potential for additional confusion about the
-   proper unit to use.
+   The security considerations of [RFC8428] apply.
+
+   The introduction of new measurement units poses no additional
+   security considerations except from a possible potential for
+   additional confusion about the proper unit to use, and from the risk
+   that an implementation based on the assumption described in the
+   penultimate paragraph of Section 4 no longer works properly.
+   However, an implementation processing a pack while making use of
+   secondary units is guaranteed to have been developed with an
+   awareness of the risks of having multiple units available for the
+   same logical type.  In any case, the existing risk of an existing
+   SenML implementation not understanding a unit that was not in the
+   initial registry content provided in [RFC8428], is unchanged, and
+   implementations are warned properly about the potential use of
+   secondary units by the need for a must-understand field or an updated
+   version field.
 
 7.  IANA Considerations
 
@@ -375,6 +387,13 @@ Internet-Draft         Additional Units for SenML          February 2020
               "Quantities and units - Part 6: Electromagnetism",
               IEC 80000-6, Edition 1.0, March 2008.
 
+
+
+Bormann                  Expires August 16, 2020                [Page 7]
+
+Internet-Draft         Additional Units for SenML          February 2020
+
+
    [IEEE-1459]
               "IEEE Standard Definitions for the Measurement of Electric
               Power Quantities Under Sinusoidal, Nonsinusoidal,
@@ -385,14 +404,6 @@ Internet-Draft         Additional Units for SenML          February 2020
               Requirement Levels", BCP 14, RFC 2119,
               DOI 10.17487/RFC2119, March 1997,
               <https://www.rfc-editor.org/info/rfc2119>.
-
-
-
-
-Bormann                  Expires August 16, 2020                [Page 7]
-
-Internet-Draft         Additional Units for SenML          February 2020
-
 
    [RFC8126]  Cotton, M., Leiba, B., and T. Narten, "Guidelines for
               Writing an IANA Considerations Section in RFCs", BCP 26,
@@ -430,7 +441,14 @@ Acknowledgements
 
    Ari Keranen pointed out the need for additional units in SenML.
    Comments provided by him as well as by Thomas Fossati, Joaquin Prado,
-   and Jaime Jimenez helped improve the document.
+   Jaime Jimenez, and Benjamin Kaduk helped improve the document.
+
+
+
+Bormann                  Expires August 16, 2020                [Page 8]
+
+Internet-Draft         Additional Units for SenML          February 2020
+
 
 Author's Address
 
@@ -445,4 +463,42 @@ Author's Address
 
 
 
-Bormann                  Expires August 16, 2020                [Page 8]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Bormann                  Expires August 16, 2020                [Page 9]
