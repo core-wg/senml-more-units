@@ -289,6 +289,7 @@ Internet-Draft         Additional Units for SenML          February 2020
    | ms        | millisecond       | s     |    1/1000 |   0 | RFCthis |
    | min       | minute            | s     |        60 |   0 | RFCthis |
    | h         | hour              | s     |      3600 |   0 | RFCthis |
+   | MHz       | megahertz         | Hz    |   1000000 |   0 | RFCthis |
    | kW        | kilowatt          | W     |      1000 |   0 | RFCthis |
    | kVA       | kilovolt-ampere   | VA    |      1000 |   0 | RFCthis |
    | kvar      | kilovar           | var   |      1000 |   0 | RFCthis |
@@ -305,6 +306,7 @@ Internet-Draft         Additional Units for SenML          February 2020
    | GB        | gigabyte          | B     |       1e9 |   0 | RFCthis |
    | Mbit/s    | megabit per       | bit/s |   1000000 |   0 | RFCthis |
    |           | second            |       |           |     |         |
+   | B/s       | byte per second   | bit/s |         8 |   0 | RFCthis |
    | MB/s      | megabyte per      | bit/s |   8000000 |   0 | RFCthis |
    |           | second            |       |           |     |         |
    | mV        | millivolt         | V     |    1/1000 |   0 | RFCthis |
@@ -328,8 +330,6 @@ Internet-Draft         Additional Units for SenML          February 2020
    +-----------+-------------------+-------+-----------+-----+---------+
 
                Table 2: Secondary units registered for SenML
-
-
 
 
 
