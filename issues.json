@@ -41,9 +41,9 @@
 
     ],
     "milestone": null,
-    "comments": 1,
+    "comments": 2,
     "created_at": "2020-01-10T14:57:30Z",
-    "updated_at": "2020-01-11T21:52:40Z",
+    "updated_at": "2020-02-27T20:28:47Z",
     "closed_at": null,
     "author_association": "NONE",
     "body": "@cabo \"Ws\" doesn't appear in the https://github.com/core-wg/senml-more-units/blob/master/draft-ietf-core-senml-more-units.md when this unit will be added? At the moment we have a PR https://github.com/OpenMobileAlliance/lwm2m-registry/pull/404 failing validation because this unit (Ws) has not been confirmed to be part of the SenML Units Registry"
@@ -82,17 +82,17 @@
     "labels": [
 
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": null,
     "assignees": [
 
     ],
     "milestone": null,
-    "comments": 0,
+    "comments": 1,
     "created_at": "2019-11-04T17:43:34Z",
-    "updated_at": "2019-11-04T17:43:34Z",
-    "closed_at": null,
+    "updated_at": "2020-02-27T20:27:41Z",
+    "closed_at": "2020-02-27T20:27:41Z",
     "author_association": "MEMBER",
     "body": "The secdir review did not like \"MAY, but SHOULD NOT\".\r\nHowever, the existing spec didn't allow using anything outside the primary registry at all, so some allowing language is needed.\r\nThere also is an ongoing discussion whether a secondary registry is the right approach, this is not the issue for that."
   },
